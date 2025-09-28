@@ -1,0 +1,76 @@
+{
+  "profile_name": "nikki_gattai_v1",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/nikki-gattai.db",
+    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/nikki"
+  },
+  "entities": [
+    { "entity_id": "documents", "label": "ドキュメント", "source": { "table": "documents" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+        { "field_id": "date", "label": "日付", "type": "date", "source": { "column": "date" } },
+        { "field_id": "order_no", "label": "順序番号", "type": "integer", "source": { "column": "order_no" } },
+        { "field_id": "want_blog", "label": "ブログ化希望", "type": "boolean", "source": { "column": "want_blog" } },
+        { "field_id": "sentiment", "label": "感情", "type": "select", "options_json": ["ポジティブ","ニュートラル","ネガティブ"], "source": { "column": "sentiment" } },
+        { "field_id": "topic", "label": "トピック", "type": "text", "source": { "column": "topic" } },
+        { "field_id": "others", "label": "その他", "type": "long_text", "source": { "column": "others" } }
+      ]
+    },
+    { "entity_id": "tags", "label": "タグ", "source": { "table": "tags" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "name", "label": "タグ名", "type": "text", "source": { "column": "name" } }
+      ]
+    }
+  ],
+  "relations": [
+    { "relation_id": "documents_tags", "label": "ドキュメントのタグ", "type": "many_to_many",
+      "left_entity": "documents", "right_entity": "tags",
+      "through": { "table": "doc_tags", "left_key": "doc_id", "right_key": "tag_id" },
+      "lookups": [ { "into_field_id": "tags_list", "from": "tags.name", "display": "comma_join" } ]
+    }
+  ],
+  "views": [
+    { "view_id": "documents_table", "entity_id": "documents", "type": "table",
+      "columns": ["title","date","sentiment","topic","tags_list"],
+      "filters": {
+        "logic": "AND",
+        "clauses": [
+          { "field": "date", "op": "gte", "value": "2024-01-01" },
+          { "field": "sentiment", "op": "in", "value": ["ポジティブ","ニュートラル"] },
+          { "field": "title", "op": "contains", "value": "旅行" }
+        ]
+    },
+      "sort": [ { "field": "date", "dir": "DESC" } ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 3,
+          "width": 240,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "title": 200,
+          "date": 200,
+          "sentiment": 200,
+          "topic": 200,
+          "tags_list": 300
+        }
+      }
+    },
+    { "view_id": "documents_cards", "entity_id": "documents", "type": "card",
+      "card": { "title_field": "title", "subtitle_field": "topic", "media_field": "path",
+        "chips": ["sentiment","tags_list"] }
+    },
+    { "view_id": "documents_calendar", "entity_id": "documents", "type": "calendar",
+      "calendar": { "start_field": "date", "end_field": null, "title_field": "title" }
+    },
+    { "view_id": "tags_table", "entity_id": "tags", "type": "table",
+      "columns": ["id","name"], 
+      "filters": { "logic": "AND", "clauses": [] },
+      "sort": [ { "field": "name", "dir": "ASC" } ]
+    }
+  ]
+}

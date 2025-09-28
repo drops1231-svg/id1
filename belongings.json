@@ -1,0 +1,54 @@
+{
+  "profile_name": "belongings_v1",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/belongings.db"
+  },
+  "entities": [
+    {
+      "entity_id": "items",
+      "label": "持ち物",
+      "source": { "table": "items" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+
+        { "field_id": "path", "label": "ファイルパス", "type": "text", "source": { "column": "path" } },
+
+        { "field_id": "image", "label": "画像(BLOB)", "type": "binary",
+          "exclude_from_select": true, "source": { "column": "image" } },
+
+        { "field_id": "category", "label": "カテゴリ", "type": "text", "source": { "column": "category" } },
+        { "field_id": "description", "label": "説明", "type": "long_text", "source": { "column": "description" } },
+        { "field_id": "kataban", "label": "型番", "type": "text", "source": { "column": "kataban" } },
+        { "field_id": "maker", "label": "メーカー", "type": "text", "source": { "column": "maker" } }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "view_id": "items_table",
+      "entity_id": "items",
+      "type": "table",
+      "columns": ["title", "category", "maker", "kataban", "description"],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 0,
+          "width": 100,
+          "text_chars": 240
+        }
+      }
+    },
+    {
+      "view_id": "items_cards",
+      "entity_id": "items",
+      "type": "card",
+      "card": {
+        "title_field": "title",
+        "subtitle_field": "category",
+        "media_field": "path",
+        "chips": ["maker", "kataban"]
+      }
+    }
+  ]
+}

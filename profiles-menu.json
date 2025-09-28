@@ -1,0 +1,20 @@
+{
+  "menu_title": "プロファイル切替",
+  "auto_load_first": true,
+  "buttons": [
+    {
+      "label": "日記（実データ）",
+      "icon": "📓",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/nikki.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/nikki-gattai.db",
+      "default_view_id": "documents_table"
+    },
+    {
+      "label": "持ち物リスト",
+      "icon": "🎒",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/belongings.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/belongings.db",
+      "default_view_id": "items_table"
+    }
+  ]
+}
