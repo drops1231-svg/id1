@@ -29,7 +29,9 @@
     { "relation_id": "documents_tags", "label": "ドキュメントのタグ", "type": "many_to_many",
       "left_entity": "documents", "right_entity": "tags",
       "through": { "table": "doc_tags", "left_key": "doc_id", "right_key": "tag_id" },
-      "lookups": [ { "into_field_id": "tags_list", "from": "tags.name", "display": "comma_join" } ]
+      "lookups": [ { "into_field_id": "tags_list", "from": "tags.name", "display": "comma_join" },
+                   { "into_field_id": "docs_list", "from": "documents.title", "display": "comma_join" }
+                 ]
     }
   ],
   "views": [
@@ -68,7 +70,7 @@
       "calendar": { "start_field": "date", "end_field": null, "title_field": "title" }
     },
     { "view_id": "tags_table", "entity_id": "tags", "type": "table",
-      "columns": ["id","name"], 
+      "columns": ["id","name","docs_list"], 
       "filters": { "logic": "AND", "clauses": [] },
       "sort": [ { "field": "name", "dir": "ASC" } ]
     }

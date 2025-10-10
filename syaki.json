@@ -1,0 +1,68 @@
+{
+  "profile_name": "syaki_v1",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/syaki.db",
+    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/syaki"
+  },
+  "entities": [
+    { "entity_id": "syaki", "label": "謝喜帳", "source": { "table": "event" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+        { "field_id": "date", "label": "日付", "type": "date", "source": { "column": "date" } },
+        { "field_id": "gutaiteki", "label": "具体的", "type": "text", "source": { "column": "gutaiteki" } },
+        { "field_id": "info", "label": "情報", "type": "text", "source": { "column": "info" } }
+      ]
+    },
+    { "entity_id": "tags", "label": "タグ", "source": { "table": "tags" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "name", "label": "タグ名", "type": "text", "source": { "column": "name" } }
+      ]
+    }
+  ],
+  "relations": [
+    { "relation_id": "eve_tag", "label": "イベントのタグ", "type": "many_to_many",
+      "left_entity": "event", "right_entity": "tags",
+      "through": { "table": "eve_tag", "left_key": "eve_id", "right_key": "tag_id" },
+      "lookups": [ { "into_field_id": "tag_list", "from": "tags.name", "display": "comma_join" },
+                   { "into_field_id": "eve_list", "from": "event.title", "display": "comma_join" }
+                 ]
+    }
+  ],
+  "views": [
+    { "view_id": "event_table", "entity_id": "syaki", "type": "table",
+      "columns": ["title","date","info","gutaiteki","tag_list"],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+    },
+      "sort": [ { "field": "date", "dir": "DESC" } ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 3,
+          "width": 240,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "title": 200,
+          "date": 100,
+          "info": 500,
+          "gutaiteki": 100,
+          "tag_list": 100
+        }
+      }
+    },
+    { "view_id": "event_cards", "entity_id": "syaki", "type": "card",
+      "card": { "title_field": "title", "subtitle_field": "info", "media_field": "path",
+        "chips": ["tag_list","date"] }
+    },
+    { "view_id": "tags_table", "entity_id": "tags", "type": "table",
+      "columns": ["id","name","eve_list"], 
+      "filters": { "logic": "AND", "clauses": [] },
+      "sort": [ { "field": "name", "dir": "ASC" } ]
+    }
+  ]
+}

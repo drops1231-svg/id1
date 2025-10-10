@@ -3,7 +3,7 @@
   "auto_load_first": true,
   "buttons": [
     {
-      "label": "日記（実データ）",
+      "label": "日記",
       "icon": "📓",
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/nikki.json",
       "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/nikki-gattai.db",
@@ -15,6 +15,20 @@
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/belongings.json",
       "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/belongings.db",
       "default_view_id": "items_table"
+    },
+    {
+      "label": "もえ帳",
+      "icon": "✨️",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/event.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/event.db",
+      "default_view_id": "event_table"
+    },
+    {
+      "label": "かんしゃ帳",
+      "icon": "👐",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/syaki.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/syaki.db",
+      "default_view_id": "event_table"
     }
   ]
 }
