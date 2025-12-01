@@ -49,15 +49,15 @@
         "column_widths": {
           "title": 200,
           "date": 100,
-          "info": 500,
-          "gutaiteki": 100,
+          "info": 100,
+          "gutaiteki": 200,
           "tag_list": 100
         }
       }
     },
     { "view_id": "event_cards", "entity_id": "syaki", "type": "card",
       "card": { "title_field": "title", "subtitle_field": "info", "media_field": "path",
-        "chips": ["tag_list","date"] }
+        "chips": ["gutaiteki","date"] }
     },
     { "view_id": "tags_table", "entity_id": "tags", "type": "table",
       "columns": ["id","name","eve_list"], 

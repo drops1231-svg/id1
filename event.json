@@ -11,17 +11,23 @@
         { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
         { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
         { "field_id": "date", "label": "日付", "type": "date", "source": { "column": "date" } },
-        { "field_id": "basyotokatati", "label": "場所と形", "type": "text", "source": { "column": "basyotokatati" } },
-        { "field_id": "imiduke", "label": "意味づけ", "type": "select", "options_json": ["ポジティブ","ニュートラル","ネガティブ"],  "source": { "column": "imiduke" } },
-        { "field_id": "info", "label": "情報", "type": "text", "source": { "column": "info" } },
-        { "field_id": "yobi", "label": "よび", "type": "text", "source": { "column": "yobi" } },
-        { "field_id": "yobi2", "label": "よび２", "type": "long_text", "source": { "column": "yobi2" } }
+        { "field_id": "rank", "label": "ランク", "type": "select",  "options_json": ["ルーキー","ブロンズ","失格"],  "source": { "column": "rank" } },
+        { "field_id": "platform", "label": "プラットフォーム", "type": "select_multi", "options_json": ["現実","X","グラビティ"],  "source": { "column": "platform" } },
+        { "field_id": "labelA", "label": "ピックアップ事由", "type": "select_multi",  "options_json": ["なし","相手が自発的に","ファンアート","贈り物","金銭取引"],  "source": { "column": "labelA" } },
+        { "field_id": "labelB", "label": "はずし事由", "type": "select_multi",  "options_json": ["なし","こちらが問いかけ","センシティブ","AI生成","うろ覚え","失格事由あり"],  "source": { "column": "labelB" } }
       ]
     },
     { "entity_id": "tags", "label": "タグ", "source": { "table": "tags" },
       "fields": [
         { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
         { "field_id": "name", "label": "タグ名", "type": "text", "source": { "column": "name" } }
+      ]
+    },
+    { "entity_id": "tagN", "label": "タグN", "source": { "table": "tagN" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "noun", "label": "名詞", "type": "text", "source": { "column": "noun" } },
+        { "field_id": "bunrui", "label": "分類", "type": "text", "source": { "column": "bunrui" } }
       ]
     },
     { "entity_id": "sender", "label": "差出人", "source": { "table": "sender" },
@@ -50,11 +56,18 @@
       "lookups": [ { "into_field_id": "snd_list", "from": "sender.sender_name", "display": "comma_join" },
                    { "into_field_id": "eve_list", "from": "event.title", "display": "comma_join" }
                  ]
+    },
+    { "relation_id": "eve_tagN", "label": "イベントのタグN", "type": "many_to_many",
+      "left_entity": "event", "right_entity": "tagN",
+      "through": { "table": "eve_tagN", "left_key": "eve_id", "right_key": "tagN_id" },
+      "lookups": [ { "into_field_id": "tagN_list", "from": "tagN.noun", "display": "comma_join" },
+                   { "into_field_id": "eve_list", "from": "event.title", "display": "comma_join" }
+                 ]
     }
   ],
   "views": [
     { "view_id": "event_table", "entity_id": "event", "type": "table",
-      "columns": ["title","date","info","snd_list","tag_list"],
+      "columns": ["title","date","rank","snd_list","platform","labelA","labelB","tag_list","tagN_list"],
       "filters": {
         "logic": "AND",
         "clauses": []
@@ -63,22 +76,28 @@
       "display_props": {
         "preview": {
           "field": "path",
-          "column_index": 3,
-          "width": 240,
+          "column_index": 10,
+          "width": 300,
           "text_chars": 240
         },
         "column_widths": {
           "title": 200,
-          "date": 200,
-          "info": 200,
-          "snd_list": 200,
-          "tag_list": 300
+          "date": 220,
+          "rank": 140,
+          "platform": 200,
+          "labelA": 200,
+          "labelB": 200,
+          "keyword": 400,
+          "snd_list": 300,
+          "tag_list": 300,
+          "tagN_list": 300,
+          "minTableWidthPct": 160
         }
       }
     },
     { "view_id": "event_cards", "entity_id": "event", "type": "card",
-      "card": { "title_field": "title", "subtitle_field": "basyotokatati", "media_field": "path",
-        "chips": ["tag_list","date"] }
+      "card": { "title_field": "title", "subtitle_field": "date", "media_field": "path",
+        "chips": ["tagN_list","snd_list"] }
     },
     { "view_id": "tags_table", "entity_id": "tags", "type": "table",
       "columns": ["id","name","eve_list"], 
@@ -89,6 +108,26 @@
       "columns": ["id","sender_name","sex","eve_list"], 
       "filters": { "logic": "AND", "clauses": [] },
       "sort": [ { "field": "sender_name", "dir": "ASC" } ]
+    },
+    { "view_id": "tagN_table", "entity_id": "tagN", "type": "table",
+      "columns": ["id","noun","bunrui","eve_list"], 
+      "filters": { "logic": "AND", "clauses": [] },
+      "sort": [ { "field": "noun", "dir": "ASC" } ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 10,
+          "width": 50,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "id": 100,
+          "noun": 200,
+          "bunrui": 220,
+          "eve-list": 220,
+          "minTableWidthPct": 80
+        }
+      }
     }
   ]
 }
