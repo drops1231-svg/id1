@@ -1,0 +1,72 @@
+{
+  "profile_name": "yumess_pr",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/yumess.db",
+    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/yumess"
+  },
+  "entities": [
+    { "entity_id": "documents", "label": "ドキュメント", "source": { "table": "documents" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+        { "field_id": "date1", "label": "開始日付", "type": "date", "source": { "column": "date1" } },
+        { "field_id": "date2", "label": "更新日付", "type": "date", "source": { "column": "date2" } },
+        { "field_id": "rating", "label": "年齢制限", "type": "select", "options_json": ["全年齢","R18"], "source": { "column": "rating" } },
+        { "field_id": "hukusuu", "label": "セレクト", "type": "select_multi", "options_json": ["はずいなおす","pixivアップ済み","pixiv非公開"], "source": { "column": "hukusuu" } }
+      ]
+    },
+    { "entity_id": "tags", "label": "タグ", "source": { "table": "tags" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "name", "label": "タグ名", "type": "text", "source": { "column": "name" } }
+      ]
+    }
+  ],
+  "relations": [
+    { "relation_id": "documents_tags", "label": "ドキュメントのタグ", "type": "many_to_many",
+      "left_entity": "documents", "right_entity": "tags",
+      "through": { "table": "doc_tags", "left_key": "doc_id", "right_key": "tag_id" },
+      "lookups": [ { "into_field_id": "tags_list", "from": "tags.name", "display": "comma_join" },
+                   { "into_field_id": "docs_list", "from": "documents.title", "display": "comma_join" }
+                 ]
+    }
+  ],
+  "views": [
+    { "view_id": "documents_table", "entity_id": "documents", "type": "table",
+      "columns": ["title","date1","date2","rating","hukusuu"],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+    },
+      "sort": [ { "field": "date1", "dir": "DESC" } ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 3,
+          "width": 240,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "title": 200,
+          "date1": 200,
+          "date2": 200,
+          "rating": 200,
+          "hukusuu": 300
+        }
+      }
+    },
+    { "view_id": "documents_cards", "entity_id": "documents", "type": "card",
+      "card": { "title_field": "title", "subtitle_field": "hukusuu", "media_field": "path",
+        "chips": ["tags_list"] }
+    },
+    { "view_id": "documents_calendar", "entity_id": "documents", "type": "calendar",
+      "calendar": { "start_field": "date1", "end_field": null, "title_field": "title" }
+    },
+    { "view_id": "tags_table", "entity_id": "tags", "type": "table",
+      "columns": ["id","name","docs_list"], 
+      "filters": { "logic": "AND", "clauses": [] },
+      "sort": [ { "field": "name", "dir": "ASC" } ]
+    }
+  ]
+}

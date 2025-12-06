@@ -1,0 +1,48 @@
+{
+  "profile_name": "tips-p",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/tips.db"
+  },
+  "entities": [
+    {
+      "entity_id": "items",
+      "label": "TIPS",
+      "source": { "table": "items" },
+      "fields": [
+        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+
+        { "field_id": "path", "label": "ファイルパス", "type": "text", "source": { "column": "path" } },
+        { "field_id": "category", "label": "カテゴリ", "type": "text", "source": { "column": "category" } }
+
+      ]
+    }
+  ],
+  "views": [
+    {
+      "view_id": "items_table",
+      "entity_id": "items",
+      "type": "table",
+      "columns": ["title", "category"],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 0,
+          "width": 100,
+          "text_chars": 240
+        }
+      }
+    },
+    {
+      "view_id": "items_cards",
+      "entity_id": "items",
+      "type": "card",
+      "card": {
+        "title_field": "title",
+        "subtitle_field": "category",
+        "media_field": "path",
+        "chips": [""]
+      }
+    }
+  ]
+}

@@ -39,11 +39,7 @@
       "columns": ["title","date","sentiment","topic","tags_list"],
       "filters": {
         "logic": "AND",
-        "clauses": [
-          { "field": "date", "op": "gte", "value": "2024-01-01" },
-          { "field": "sentiment", "op": "in", "value": ["ポジティブ","ニュートラル"] },
-          { "field": "title", "op": "contains", "value": "旅行" }
-        ]
+        "clauses": []
     },
       "sort": [ { "field": "date", "dir": "DESC" } ],
       "display_props": {
