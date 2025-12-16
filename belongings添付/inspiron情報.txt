@@ -1,0 +1,42 @@
+「Inspiron 15 3505」
+
+◯モニタ
+
+◯寸法/重量
+
+◯ポート
+
+1.SDカードリーダー 
+2.USB 2.0 Gen1 Type-A 
+3.ウェッジ型ロックスロット 
+4.電源ケーブル 
+5.HDMI 1.4 
+6.LANポート 
+7.USB 3.2 Gen1 Type-A 
+8.USB 3.2 Gen1 Type-A 
+9.ヘッドセットジャック
+
+◯スペック
+
+Operating System
+Windows 10 Home 64-bit
+CPU
+AMD Ryzen 5 Mobile 3500U
+Picasso 12nm Technology
+RAM
+16.0GB Dual-Channel DDR4 @ 1200MHz (17-17-17-39)　※自分が8GB増設
+Motherboard
+Dell Inc. 0GWD64 (FP5)
+Graphics
+Generic PnP Monitor (1920x1080@60Hz)
+Generic PnP Monitor (1080x1920@59Hz)　※自分が接続
+2048MB ATI AMD Radeon Graphics (Dell)
+Storage
+476GB BC511 NVMe SK hynix 512GB (Unknown (SSD))
+
+◯スペックについてコメント（2025/6/17）
+
+CPUは4コア8スレッド
+原神はガチで無理。最低画質で扇風機をぶちあてて無理やり動かすことになるし、やる気失せる。
+アンテやマイクラはできる。
+OBSでのSwitchゲーム録画も一応できるがグダグダになります

@@ -7,21 +7,285 @@
     {
       "entity_id": "items",
       "label": "持ち物",
-      "source": { "table": "items" },
+      "source": {
+        "table": "items"
+      },
       "fields": [
-        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
-        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
-
-        { "field_id": "path", "label": "ファイルパス", "type": "text", "source": { "column": "path" } },
-
-        { "field_id": "image", "label": "画像(BLOB)", "type": "binary",
-          "exclude_from_select": true, "source": { "column": "image" } },
-
-        { "field_id": "category", "label": "カテゴリ", "type": "text", "source": { "column": "category" } },
-        { "field_id": "description", "label": "説明", "type": "long_text", "source": { "column": "description" } },
-        { "field_id": "kataban", "label": "型番", "type": "text", "source": { "column": "kataban" } },
-        { "field_id": "maker", "label": "メーカー", "type": "text", "source": { "column": "maker" } }
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "title",
+          "label": "タイトル",
+          "type": "text",
+          "source": {
+            "column": "title"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "path",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        },
+        {
+          "field_id": "tenpu",
+          "label": "tenpu",
+          "type": "file_path",
+          "source": {
+            "column": "tenpu"
+          }
+        },
+        {
+          "field_id": "topbunrui",
+          "label": "大分類",
+          "type": "select",
+          "options_json": [
+            "回数アイテム",
+            "消費アイテム",
+            "装備アイテム",
+            "捨てたもの"
+          ],
+          "source": {
+            "column": "topbunrui"
+          }
+        },
+        {
+          "field_id": "date",
+          "label": "日付",
+          "type": "text",
+          "source": {
+            "column": "date"
+          }
+        },
+        {
+          "field_id": "price",
+          "label": "価格",
+          "type": "text",
+          "source": {
+            "column": "price"
+          }
+        },
+        {
+          "field_id": "suuryou",
+          "label": "数量",
+          "type": "text",
+          "source": {
+            "column": "suuryou"
+          }
+        },
+        {
+          "field_id": "pricemeyasu",
+          "label": "めやす価格",
+          "type": "text",
+          "source": {
+            "column": "pricemeyasu"
+          }
+        },
+        {
+          "field_id": "maker",
+          "label": "メーカー",
+          "type": "text",
+          "source": {
+            "column": "maker"
+          }
+        },
+        {
+          "field_id": "kataban",
+          "label": "型番",
+          "type": "text",
+          "source": {
+            "column": "kataban"
+          }
+        },
+        {
+          "field_id": "sunpou",
+          "label": "寸法",
+          "type": "text",
+          "source": {
+            "column": "sunpou"
+          }
+        },
+        {
+          "field_id": "omosa",
+          "label": "重さ",
+          "type": "text",
+          "source": {
+            "column": "omosa"
+          }
+        },
+        {
+          "field_id": "category",
+          "label": "カテゴリ",
+          "type": "select",
+          "options_json": [
+            "飲食物",
+            "家具",
+            "家電",
+            "ハウスキーピンググッズ",
+            "収納用品",
+            "インテリア",
+            "衣料と服飾",
+            "衣料のうち衛生",
+            "コスメティック",
+            "医薬品",
+            "医薬部外品",
+            "衛生用品",
+            "おもちゃとホビー",
+            "文房具",
+            "コンピュータ",
+            "コンピュータ周辺機器",
+            "デバイスアクセサリ",
+            "ソフトウェア",
+            "インターネット空間",
+            "ゲームソフト",
+            "ゲームプレイサービス",
+            "視聴覚作品",
+            "視聴覚サービス",
+            ""
+          ],
+          "source": {
+            "column": "category"
+          }
+        },
+        {
+          "field_id": "tag",
+          "label": "タグ",
+          "type": "multi_select",
+          "options_json": [
+            "PC",
+            "paper",
+            "charm",
+            "記憶領域あり",
+            "災害時",
+            "もらいもの",
+            "買ってよかった"
+          ],
+          "source": {
+            "column": "tag"
+          }
+        },
+        {
+          "field_id": "description",
+          "label": "説明",
+          "type": "text",
+          "source": {
+            "column": "description"
+          }
+        },
+        {
+          "field_id": "bunki",
+          "label": "分岐",
+          "type": "bunki",
+          "options_json": [
+            "food",
+            "cloth"
+          ],
+          "source": {
+            "column": "bunki"
+          }
+        }
       ]
+    },
+    {
+      "entity_id": "foodbunki",
+      "label": "食べ物追加情報",
+      "source": {
+        "table": "foodbunki"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "item_id",
+          "label": "item_id",
+          "type": "bunkifk",
+          "source": {
+            "column": "item_id"
+          }
+        },
+        {
+          "field_id": "kcal",
+          "label": "kcal",
+          "type": "text",
+          "source": {
+            "column": "kcal"
+          }
+        }
+      ]
+    },
+    {
+      "entity_id": "hukubunki",
+      "label": "服追加情報",
+      "source": {
+        "table": "hukubunki"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "item_id",
+          "label": "item_id",
+          "type": "bunkifk",
+          "source": {
+            "column": "item_id"
+          }
+        },
+        {
+          "field_id": "season",
+          "label": "季節",
+          "type": "text",
+          "source": {
+            "column": "season"
+          }
+        },
+        {
+          "field_id": "part",
+          "label": "パート",
+          "type": "text",
+          "source": {
+            "column": "part"
+          }
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "belo_detail_bunki",
+      "label": "種別分岐",
+      "type": "bunki",
+      "entity": "items",
+      "by_field": "bunki",
+      "cases": {
+        "food": {
+          "detail_entity": "foodbunki",
+          "fk": "item_id"
+        },
+        "cloth": {
+          "detail_entity": "hukubunki",
+          "fk": "item_id"
+        }
+      }
     }
   ],
   "views": [
@@ -29,7 +293,13 @@
       "view_id": "items_table",
       "entity_id": "items",
       "type": "table",
-      "columns": ["title", "category", "maker", "kataban", "description"],
+      "columns": [
+        "title",
+        "category",
+        "maker",
+        "kataban",
+        "description"
+      ],
       "display_props": {
         "preview": {
           "field": "path",
@@ -47,7 +317,10 @@
         "title_field": "title",
         "subtitle_field": "category",
         "media_field": "path",
-        "chips": ["maker", "kataban"]
+        "chips": [
+          "maker",
+          "kataban"
+        ]
       }
     }
   ]
