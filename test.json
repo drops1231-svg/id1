@@ -1,0 +1,311 @@
+{
+  "profile_name": "ipbox",
+  "storage": {
+    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/test.db",
+    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/test"
+  },
+  "entities": [
+    {
+      "entity_id": "ADB",
+      "label": "A",
+      "source": {
+        "table": "ADB"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "ファイルパス",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        },
+        {
+          "field_id": "path2",
+          "label": "ファイルパス2",
+          "type": "file_path",
+          "source": {
+            "column": "path2"
+          }
+        },
+        {
+          "field_id": "title",
+          "label": "タイトル",
+          "type": "text",
+          "source": {
+            "column": "title"
+          }
+        },
+        {
+          "field_id": "cv",
+          "label": "CV",
+          "type": "bunki",
+          "options_json": [
+            "female"
+          ],
+          "source": {
+            "column": "cv"
+          }
+        },
+        {
+          "field_id": "sintyo",
+          "label": "しんちょう",
+          "type": "text",
+          "source": {
+            "column": "sintyo"
+          }
+        }
+      ]
+    },
+    {
+      "entity_id": "BDB",
+      "label": "B",
+      "source": {
+        "table": "BDB"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "ファイルパス",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        },
+        {
+          "field_id": "title",
+          "label": "タイトル",
+          "type": "text",
+          "source": {
+            "column": "title"
+          }
+        }
+      ]
+    },
+    {
+      "entity_id": "tags1",
+      "label": "タグ1",
+      "source": {
+        "table": "tags1"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "name",
+          "label": "タグ名",
+          "type": "text",
+          "source": {
+            "column": "name"
+          }
+        }
+      ]
+    },
+    {
+      "entity_id": "tags2",
+      "label": "タグ2",
+      "source": {
+        "table": "tags2"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "name",
+          "label": "タグ名",
+          "type": "text",
+          "source": {
+            "column": "name"
+          }
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "con_t1",
+      "label": "タグ１",
+      "type": "many_to_many",
+      "left_entity": "ADB",
+      "right_entity": "tags1",
+      "through": {
+        "table": "r_c_t1",
+        "left_key": "con_id",
+        "right_key": "t1_id"
+      },
+      "lookups": [
+        {
+          "into_field_id": "con_list",
+          "from": "ADB.title",
+          "display": "comma_join"
+        },
+        {
+          "into_field_id": "t1_list",
+          "from": "tags1.name",
+          "display": "comma_join"
+        }
+      ]
+    },
+    {
+      "relation_id": "belo_detail_bunki",
+      "label": "種別分岐",
+      "type": "bunki",
+      "entity": "ADB",
+      "by_field": "cv",
+      "cases": {
+        "female": {
+          "detail_entity": "BDB",
+          "fk": "id"
+        }
+      }
+    }
+  ],
+  "views": [
+    {
+      "view_id": "con_table",
+      "entity_id": "ADB",
+      "type": "table",
+      "columns": [
+        "title",
+        "cv",
+        "sintyo",
+        "t1_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": [
+        {
+          "field": "title",
+          "dir": "ASC"
+        }
+      ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 1,
+          "width": 150,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "title": 200,
+          "mat_list": 300,
+          "t1_list": 300,
+          "minTableWidthPct": 100
+        }
+      }
+    },
+    {
+      "view_id": "mat_table",
+      "entity_id": "BDB",
+      "type": "table",
+      "columns": [
+        "title",
+        "con_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": [
+        {
+          "field": "title",
+          "dir": "DESC"
+        }
+      ],
+      "display_props": {
+        "preview": {
+          "field": "path",
+          "column_index": 1,
+          "width": 150,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "title": 200,
+          "con_list": 300,
+          "minTableWidthPct": 100
+        }
+      }
+    },
+    {
+      "view_id": "con_cards",
+      "entity_id": "ADB",
+      "type": "card",
+      "card": {
+        "title_field": "title",
+        "subtitle_field": "cv",
+        "media_field": "path",
+        "chips": [
+          "sintyo",
+          "t1_list"
+        ]
+      }
+    },
+    {
+      "view_id": "t1_table",
+      "entity_id": "tags1",
+      "type": "table",
+      "columns": [
+        "id",
+        "name",
+        "con_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": [
+        {
+          "field": "name",
+          "dir": "ASC"
+        }
+      ]
+    },
+    {
+      "view_id": "v_cross_status_owner",
+      "entity_id": "ADB",
+      "type": "cross",
+      "cross": {
+        "row_field": "cv",
+        "col_field": "sintyo",
+        "card": {
+          "title_field": "title",
+          "subtitle_field": "cv",
+          "media_field": "path",
+          "chips": [
+            "sintyo"
+          ]
+        }
+      }
+    }
+  ]
+}

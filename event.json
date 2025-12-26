@@ -5,75 +5,391 @@
     "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/event"
   },
   "entities": [
-    { "entity_id": "evento", "label": "イベント", "source": { "table": "evento" },
+    {
+      "entity_id": "evento",
+      "label": "イベント",
+      "source": {
+        "table": "evento"
+      },
       "fields": [
-        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
-        { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
-        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
-        { "field_id": "date", "label": "日付", "type": "date", "source": { "column": "date" } },
-        { "field_id": "rank", "label": "ランク", "type": "select",  "options_json": ["ルーキー","ブロンズ","失格"],  "source": { "column": "rank" } },
-        { "field_id": "platform", "label": "名義", "type": "select_multi", "options_json": ["姫野ドロ","現実の紀伊","fantiaの天音","Xのドロ","グラビティの天音"],  "source": { "column": "platform" } },
-        { "field_id": "labelA", "label": "ピックアップ事由", "type": "select_multi",  "options_json": ["なし","相手が自発的に","ファンアート","贈り物","金銭取引"],  "source": { "column": "labelA" } },
-        { "field_id": "labelB", "label": "はずし事由", "type": "select_multi",  "options_json": ["なし","こちらが問いかけ","センシティブ","AI生成","うろ覚え","失格事由あり"],  "source": { "column": "labelB" } }
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "ファイルパス",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        },
+        {
+          "field_id": "title",
+          "label": "タイトル",
+          "type": "text",
+          "source": {
+            "column": "title"
+          }
+        },
+        {
+          "field_id": "date",
+          "label": "日付",
+          "type": "date",
+          "source": {
+            "column": "date"
+          }
+        },
+        {
+          "field_id": "rank",
+          "label": "ランク",
+          "type": "select",
+          "options_json": [
+            "ルーキー",
+            "ブロンズ",
+            "失格"
+          ],
+          "source": {
+            "column": "rank"
+          }
+        },
+        {
+          "field_id": "platform",
+          "label": "名義",
+          "type": "select_multi",
+          "options_json": [
+            "姫野ドロ",
+            "現実の紀伊",
+            "fantiaの天音",
+            "Xのドロ",
+            "グラビティの天音"
+          ],
+          "source": {
+            "column": "platform"
+          }
+        },
+        {
+          "field_id": "labelA",
+          "label": "タグ",
+          "type": "select_multi",
+          "options_json": [
+            "なし",
+            "相手が自発的に",
+            "ファンアート",
+            "贈り物",
+            "金銭取引",
+            "複数人共有",
+            "あだ名",
+            "似てる",
+            "性格"
+          ],
+          "source": {
+            "column": "labelA"
+          }
+        },
+        {
+          "field_id": "labelB",
+          "label": "ネガタグ",
+          "type": "select_multi",
+          "options_json": [
+            "なし",
+            "センシティブ",
+            "こちらが誘導",
+            "うろ覚え",
+            "ノーカンな気がする"
+          ],
+          "source": {
+            "column": "labelB"
+          }
+        },
+        {
+          "field_id": "genbun",
+          "label": "原文ママ",
+          "type": "text_long",
+          "source": {
+            "column": "genbun"
+          }
+        },
+        {
+          "field_id": "emoji",
+          "label": "絵文字",
+          "type": "text",
+          "source": {
+            "column": "emoji"
+          }
+        }
       ]
     },
-    { "entity_id": "tags", "label": "タグ", "source": { "table": "tags" },
+    {
+      "entity_id": "tags",
+      "label": "タグ",
+      "source": {
+        "table": "tags"
+      },
       "fields": [
-        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
-        { "field_id": "name", "label": "タグ名", "type": "text", "source": { "column": "name" } }
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "name",
+          "label": "タグ名",
+          "type": "text",
+          "source": {
+            "column": "name"
+          }
+        },
+        {
+          "field_id": "bunrui",
+          "label": "分類",
+          "type": "text",
+          "source": {
+            "column": "bunrui"
+          }
+        }
       ]
     },
-    { "entity_id": "tagN", "label": "タグN", "source": { "table": "tagN" },
+    {
+      "entity_id": "tagN",
+      "label": "タグN",
+      "source": {
+        "table": "tagN"
+      },
       "fields": [
-        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
-        { "field_id": "noun", "label": "名詞", "type": "text", "source": { "column": "noun" } },
-        { "field_id": "bunrui", "label": "分類", "type": "text", "source": { "column": "bunrui" } }
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "noun",
+          "label": "名詞",
+          "type": "text",
+          "source": {
+            "column": "noun"
+          }
+        },
+        {
+          "field_id": "bunrui",
+          "label": "分類",
+          "type": "text",
+          "source": {
+            "column": "bunrui"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "ファイルパス",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        }
       ]
     },
-    { "entity_id": "sender", "label": "差出人", "source": { "table": "sender" },
+    {
+      "entity_id": "sender",
+      "label": "差出人",
+      "source": {
+        "table": "sender"
+      },
       "fields": [
-        { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
-        { "field_id": "sender_name", "label": "名前", "type": "text", "source": { "column": "sender_name" } },
-        { "field_id": "sex", "label": "性別", "type": "select", "options_json": ["男性","女性","法人"], "source": { "column": "sex" } },
-        { "field_id": "age", "label": "年代", "type": "text", "source": { "column": "age" } },
-        { "field_id": "mbti", "label": "MBTI", "type": "text", "source": { "column": "mbti" } },
-        { "field_id": "kankei", "label": "関係", "type": "text", "source": { "column": "kankei" } },
-        { "field_id": "info", "label": "情報", "type": "text", "source": { "column": "info" } }
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "sender_name",
+          "label": "名前",
+          "type": "text",
+          "source": {
+            "column": "sender_name"
+          }
+        },
+        {
+          "field_id": "sex",
+          "label": "性別",
+          "type": "select",
+          "options_json": [
+            "男性",
+            "女性",
+            "法人"
+          ],
+          "source": {
+            "column": "sex"
+          }
+        },
+        {
+          "field_id": "age",
+          "label": "年代",
+          "type": "text",
+          "source": {
+            "column": "age"
+          }
+        },
+        {
+          "field_id": "mbti",
+          "label": "MBTI",
+          "type": "text",
+          "source": {
+            "column": "mbti"
+          }
+        },
+        {
+          "field_id": "kankei",
+          "label": "関係",
+          "type": "text",
+          "source": {
+            "column": "kankei"
+          }
+        },
+        {
+          "field_id": "info",
+          "label": "情報",
+          "type": "text",
+          "source": {
+            "column": "info"
+          }
+        }
       ]
     }
   ],
   "relations": [
-    { "relation_id": "eve_snd", "label": "イベントの差出人", "type": "many_to_many",
-      "left_entity": "evento", "right_entity": "sender",
-      "through": { "table": "eve_snd", "left_key": "eve_id", "right_key": "snd_id" },
-      "lookups": [ { "into_field_id": "snd_list", "from": "sender.sender_name", "display": "comma_join" },
-                   { "into_field_id": "eve_list", "from": "evento.title", "display": "comma_join" }
-                 ]
+    {
+      "relation_id": "eve_snd",
+      "label": "イベントの差出人",
+      "type": "many_to_many",
+      "left_entity": "evento",
+      "right_entity": "sender",
+      "through": {
+        "table": "eve_snd",
+        "left_key": "eve_id",
+        "right_key": "snd_id"
+      },
+      "lookups": [
+        {
+          "into_field_id": "snd_list",
+          "from": "sender.sender_name",
+          "display": "comma_join"
+        },
+        {
+          "into_field_id": "eve_list",
+          "from": "evento.title",
+          "display": "comma_join"
+        }
+      ]
     },
-    { "relation_id": "eve_tag", "label": "イベントのタグ", "type": "many_to_many",
-      "left_entity": "evento", "right_entity": "tags",
-      "through": { "table": "eve_tag", "left_key": "eve_id", "right_key": "tag_id" },
-      "lookups": [ { "into_field_id": "tag_list", "from": "tags.name", "display": "comma_join" },
-                   { "into_field_id": "eve_list", "from": "evento.title", "display": "comma_join" }
-                 ]
+    {
+      "relation_id": "eve_tagN",
+      "label": "イベントのタグN",
+      "type": "many_to_many",
+      "left_entity": "evento",
+      "right_entity": "tagN",
+      "through": {
+        "table": "eve_tagN",
+        "left_key": "eve_id",
+        "right_key": "tagN_id"
+      },
+      "lookups": [
+        {
+          "into_field_id": "tagN_list",
+          "from": "tagN.noun",
+          "display": "comma_join"
+        },
+        {
+          "into_field_id": "eve_list",
+          "from": "evento.title",
+          "display": "comma_join"
+        }
+      ]
     },
-
-    { "relation_id": "eve_tagN", "label": "イベントのタグN", "type": "many_to_many",
-      "left_entity": "evento", "right_entity": "tagN",
-      "through": { "table": "eve_tagN", "left_key": "eve_id", "right_key": "tagN_id" },
-      "lookups": [ { "into_field_id": "tagN_list", "from": "tagN.noun", "display": "comma_join" },
-                   { "into_field_id": "eve_list", "from": "evento.title", "display": "comma_join" }
-                 ]
+    {
+      "relation_id": "eve_tag",
+      "label": "イベントのタグ",
+      "type": "many_to_many",
+      "left_entity": "evento",
+      "right_entity": "tags",
+      "through": {
+        "table": "eve_tag",
+        "left_key": "eve_id",
+        "right_key": "tag_id"
+      },
+      "lookups": [
+        {
+          "into_field_id": "tag_list",
+          "from": "tags.name",
+          "display": "comma_join"
+        },
+        {
+          "into_field_id": "eve_list",
+          "from": "evento.title",
+          "display": "comma_join"
+        }
+      ]
     }
   ],
   "views": [
-    { "view_id": "event_table", "entity_id": "evento", "type": "table",
-      "columns": ["title","date","rank","snd_list","platform","labelA","labelB","tag_list","tagN_list"],
+    {
+      "view_id": "event_cards",
+      "entity_id": "evento",
+      "type": "card",
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }
+      ],
+      "card": {
+        "title_field": "genbun",
+        "subtitle_field": "tagN_list",
+        "media_field": "none",
+        "chips": [
+          "platform",
+          "snd_list"
+        ],
+        "use_emoji": true,
+        "emoji_field": "emoji"
+      }
+    },
+    {
+      "view_id": "event_table",
+      "entity_id": "evento",
+      "type": "table",
+      "columns": [
+        "title",
+        "date",
+        "rank",
+        "snd_list",
+        "platform",
+        "labelA",
+        "labelB",
+        "tagN_list"
+      ],
       "filters": {
         "logic": "AND",
         "clauses": []
-    },
-      "sort": [ { "field": "date", "dir": "DESC" } ],
+      },
+      "sort": [
+        {
+          "field": "date",
+          "dir": "DESC"
+        }
+      ],
       "display_props": {
         "preview": {
           "field": "path",
@@ -86,7 +402,7 @@
           "date": 220,
           "rank": 140,
           "platform": 200,
-          "labelA": 200,
+          "labelA": 300,
           "labelB": 200,
           "keyword": 400,
           "snd_list": 300,
@@ -96,24 +412,70 @@
         }
       }
     },
-    { "view_id": "event_cards", "entity_id": "evento", "type": "card",
-      "card": { "title_field": "title", "subtitle_field": "date", "media_field": "path",
-        "chips": ["tagN_list","snd_list"] }
+    {
+      "view_id": "evento_cross",
+      "entity_id": "evento",
+      "type": "cross",
+      "cross": {
+        "row_field": "rank",
+        "col_field": "none",
+        "card": {
+          "title_field": "title",
+          "subtitle_field": "date",
+          "media_field": "path",
+          "chips": [
+            "snd_list"
+          ]
+        }
+      }
     },
-    { "view_id": "sender_table", "entity_id": "sender", "type": "table",
-      "columns": ["id","sender_name","sex","eve_list"], 
-      "filters": { "logic": "AND", "clauses": [] },
-      "sort": [ { "field": "sender_name", "dir": "ASC" } ]
+    {
+      "view_id": "sender_table",
+      "entity_id": "sender",
+      "type": "table",
+      "columns": [
+        "sender_name",
+        "sex",
+        "info",
+        "eve_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": {
+        "field": "sender_name",
+        "dir": "ASC"
+      },
+      "display_props": {
+        "preview": {
+          "field": "none",
+          "column_index": 10,
+          "width": 50,
+          "text_chars": 240
+        }
+      }
     },
-    { "view_id": "tags_table", "entity_id": "tags", "type": "table",
-      "columns": ["id","name","eve_list"], 
-      "filters": { "logic": "AND", "clauses": [] },
-      "sort": [ { "field": "name", "dir": "ASC" } ]
-    },
-    { "view_id": "tagN_table", "entity_id": "tagN", "type": "table",
-      "columns": ["id","noun","bunrui","eve_list"], 
-      "filters": { "logic": "AND", "clauses": [] },
-      "sort": [ { "field": "noun", "dir": "ASC" } ],
+    {
+      "view_id": "tagN_table",
+      "entity_id": "tagN",
+      "type": "table",
+      "columns": [
+        "id",
+        "noun",
+        "bunrui",
+        "eve_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": [
+        {
+          "field": "noun",
+          "dir": "ASC"
+        }
+      ],
       "display_props": {
         "preview": {
           "field": "path",
@@ -124,6 +486,59 @@
         "column_widths": {
           "id": 100,
           "noun": 200,
+          "bunrui": 220,
+          "eve-list": 220,
+          "minTableWidthPct": 80
+        }
+      }
+    },
+    {
+      "view_id": "tagN_cross",
+      "entity_id": "tagN",
+      "type": "cross",
+      "cross": {
+        "row_field": "bunrui",
+        "col_field": "none",
+        "card": {
+          "title_field": "noun",
+          "subtitle_field": "eve_list",
+          "media_field": "path",
+          "chips": [
+            "none"
+          ]
+        }
+      }
+    },
+    {
+      "view_id": "tags_table",
+      "entity_id": "tags",
+      "type": "table",
+      "columns": [
+        "id",
+        "name",
+        "bunrui",
+        "eve_list"
+      ],
+      "filters": {
+        "logic": "AND",
+        "clauses": []
+      },
+      "sort": [
+        {
+          "field": "name",
+          "dir": "ASC"
+        }
+      ],
+      "display_props": {
+        "preview": {
+          "field": "none",
+          "column_index": 10,
+          "width": 50,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "id": 100,
+          "name": 200,
           "bunrui": 220,
           "eve-list": 220,
           "minTableWidthPct": 80

@@ -35,6 +35,22 @@
           "source": {
             "column": "title"
           }
+        },
+        {
+          "field_id": "cv",
+          "label": "CV",
+          "type": "text",
+          "source": {
+            "column": "cv"
+          }
+        },
+        {
+          "field_id": "sintyo",
+          "label": "身長",
+          "type": "text",
+          "source": {
+            "column": "sintyo"
+          }
         }
       ]
     },
@@ -179,7 +195,8 @@
       "type": "table",
       "columns": [
         "title",
-        "mat_list",
+        "cv",
+        "sintyo",
         "t1_list"
       ],
       "filters": {
@@ -245,10 +262,10 @@
       "type": "card",
       "card": {
         "title_field": "title",
-        "subtitle_field": "",
+        "subtitle_field": "cv",
         "media_field": "path",
         "chips": [
-          "mat_list",
+          "sintyo",
           "t1_list"
         ]
       }

@@ -63,7 +63,7 @@
           "label": "販売状況",
           "type": "select_multi",
           "options_json": [
-            "01",
+            "ci-en（無料）",
             "00"
           ],
           "source": {
@@ -75,6 +75,7 @@
           "label": "採用状況",
           "type": "select_multi",
           "options_json": [
+            "採用予定",
             "ゲームX",
             "ドキュX"
           ],

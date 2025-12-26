@@ -9,7 +9,9 @@
       "fields": [
         { "field_id": "id", "label": "ID", "type": "pk", "source": { "column": "id" } },
         { "field_id": "path", "label": "ファイルパス", "type": "file_path", "source": { "column": "path" } },
-        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } }
+        { "field_id": "title", "label": "タイトル", "type": "text", "source": { "column": "title" } },
+        { "field_id": "aaa", "label": "aaa", "type": "text", "source": { "column": "aaa" } },
+        { "field_id": "bbb", "label": "bbb", "type": "text", "source": { "column": "bbb" } }
       ]
     },
     { "entity_id": "BDB", "label": "B", "source": { "table": "BDB" },
@@ -92,7 +94,7 @@
         }
       }
     },
-    { "view_id": "con_cards", "entity_id": "consideration", "type": "card",
+    { "view_id": "con_cards", "entity_id": "ADB", "type": "card",
       "card": { "title_field": "title", "subtitle_field": "", "media_field": "path",
         "chips": ["mat_list","t1_list"] }
     },
@@ -100,6 +102,23 @@
       "columns": ["id","name","con_list"], 
       "filters": { "logic": "AND", "clauses": [] },
       "sort": [ { "field": "name", "dir": "ASC" } ]
+    },
+        {
+      "view_id": "cross",
+      "entity_id": "ADB",
+      "type": "cross",
+      "cross": {
+        "row_field": "aaa",
+        "col_field": "bbb",
+        "card": {
+          "title_field": "aaa",
+          "subtitle_field": "bbb",
+          "media_field": "none",
+          "chips": [
+            "id"
+          ]
+        }
+      }
     }
   ]
 }
