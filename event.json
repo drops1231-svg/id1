@@ -29,6 +29,22 @@
           }
         },
         {
+          "field_id": "itiji",
+          "label": "資料",
+          "type": "file_path",
+          "source": {
+            "column": "itiji"
+          }
+        },
+        {
+          "field_id": "samune",
+          "label": "サムネファイル",
+          "type": "file_path",
+          "source": {
+            "column": "samune"
+          }
+        },
+        {
           "field_id": "title",
           "label": "タイトル",
           "type": "text",
@@ -228,7 +244,8 @@
           "options_json": [
             "男性",
             "女性",
-            "法人"
+            "法人",
+            "特定されていない"
           ],
           "source": {
             "column": "sex"
@@ -367,6 +384,28 @@
       }
     },
     {
+      "view_id": "event_cards2",
+      "entity_id": "evento",
+      "type": "card",
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }
+      ],
+      "card": {
+        "title_field": "title",
+        "subtitle_field": "tagN_list",
+        "media_field": "samune",
+        "chips": [
+          "platform",
+          "snd_list"
+        ],
+        "use_emoji": false,
+        "emoji_field": "none"
+      }
+    },
+    {
       "view_id": "event_table",
       "entity_id": "evento",
       "type": "table",
@@ -428,6 +467,9 @@
           ]
         }
       }
+    },
+        { "view_id": "ev_calendar", "entity_id": "evento", "type": "calendar",
+      "calendar": { "start_field": "date", "end_field": null, "title_field": "title" }
     },
     {
       "view_id": "sender_table",
@@ -544,6 +586,13 @@
           "minTableWidthPct": 80
         }
       }
-    }
+    },
+    {"view_id":"pivo",
+    "entity_id": "evento",
+    "type":"pivot",
+    "pivot": {
+          "value_mode": "count"
+        }
+  }
   ]
 }

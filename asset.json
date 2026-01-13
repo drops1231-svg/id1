@@ -227,6 +227,13 @@
           "dir": "ASC"
         }
       ]
-    }
+    },
+    {"view_id":"pivo",
+    "entity_id": "documents",
+    "type":"pivot",
+    "pivot": {
+          "value_mode": "count"
+        }
+  }
   ]
 }

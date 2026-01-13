@@ -158,7 +158,7 @@
         {
           "field_id": "tag",
           "label": "タグ",
-          "type": "multi_select",
+          "type": "select_multi",
           "options_json": [
             "PC",
             "paper",

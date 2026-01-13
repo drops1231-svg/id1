@@ -38,7 +38,7 @@
         },
         {
           "field_id": "title",
-          "label": "タイトル",
+          "label": "タイトルあ",
           "type": "text",
           "source": {
             "column": "title"
