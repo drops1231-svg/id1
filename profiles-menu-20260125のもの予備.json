@@ -17,6 +17,13 @@
       "default_view_id": "documents_table"
     },
     {
+      "label": "追跡",
+      "icon": "⛰️",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/tuiseki.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/tuiseki.db",
+      "default_view_id": "con_table"
+    },
+    {
       "label": "日記",
       "icon": "📓",
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/nikki.json",
@@ -24,11 +31,32 @@
       "default_view_id": "documents_table"
     },
     {
-      "label": "持ち物",
+      "label": "持ち物リスト",
       "icon": "🎒",
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/belongings.json",
       "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/belongings.db",
       "default_view_id": "items_table"
+    },
+    {
+      "label": "TIPS",
+      "icon": "💡",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/tips.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/tips.db",
+      "default_view_id": "items_table"
+    },
+    {
+      "label": "教養",
+      "icon": "👑",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/breeding.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/breeding.db",
+      "default_view_id": "con_table"
+    },
+    {
+      "label": "IP箱",
+      "icon": "🎞️",
+      "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/ipbox.json",
+      "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/ipbox.db",
+      "default_view_id": "con_table"
     },
     {
       "label": "ゆめしょ",
@@ -38,7 +66,7 @@
       "default_view_id": "documents_table"
     },
     {
-      "label": "かんしゃ",
+      "label": "かんしゃ帳",
       "icon": "👐",
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/syaki.json",
       "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/syaki.db",

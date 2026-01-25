@@ -240,12 +240,12 @@
         {
           "field_id": "sex",
           "label": "性別",
-          "type": "select",
+          "type": "select_multi",
           "options_json": [
             "男性",
             "女性",
             "法人",
-            "特定されていない"
+            "複数"
           ],
           "source": {
             "column": "sex"
@@ -281,6 +281,118 @@
           "type": "text",
           "source": {
             "column": "info"
+          }
+        }
+      ]
+    },
+     {
+      "entity_id": "houkoku",
+      "label": "実績報告",
+      "source": {
+        "table": "houkoku"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": {
+            "column": "id"
+          }
+        },
+        {
+          "field_id": "path",
+          "label": "ファイルパス",
+          "type": "file_path",
+          "source": {
+            "column": "path"
+          }
+        },
+        {
+          "field_id": "itiji",
+          "label": "資料",
+          "type": "file_path",
+          "source": {
+            "column": "itiji"
+          }
+        },
+        {
+          "field_id": "samune",
+          "label": "サムネファイル",
+          "type": "file_path",
+          "source": {
+            "column": "samune"
+          }
+        },
+        {
+          "field_id": "title",
+          "label": "タイトル",
+          "type": "text",
+          "source": {
+            "column": "title"
+          }
+        },
+        {
+          "field_id": "date",
+          "label": "日付",
+          "type": "date",
+          "source": {
+            "column": "date"
+          }
+        },
+        {
+          "field_id": "rank",
+          "label": "ランク",
+          "type": "select",
+          "options_json": [
+            "ルーキー",
+            "ブロンズ",
+            "失格"
+          ],
+          "source": {
+            "column": "rank"
+          }
+        },
+        {
+          "field_id": "platform",
+          "label": "名義",
+          "type": "select_multi",
+          "options_json": [
+            "姫野ドロ",
+            "現実の紀伊",
+            "fantiaの天音",
+            "Xのドロ",
+            "グラビティの天音"
+          ],
+          "source": {
+            "column": "platform"
+          }
+        },
+        {
+          "field_id": "labelA",
+          "label": "タグ",
+          "type": "select_multi",
+          "options_json": [
+            "なし",
+            "相手が自発的に",
+            "ファンアート",
+            "贈り物",
+            "金銭取引",
+            "複数人共有",
+            "あだ名",
+            "似てる",
+            "性格"
+          ],
+          "source": {
+            "column": "labelA"
+          }
+        },
+        {
+          "field_id": "emoji",
+          "label": "絵文字",
+          "type": "text",
+          "source": {
+            "column": "emoji"
           }
         }
       ]
@@ -468,8 +580,15 @@
         }
       }
     },
-        { "view_id": "ev_calendar", "entity_id": "evento", "type": "calendar",
-      "calendar": { "start_field": "date", "end_field": null, "title_field": "title" }
+    {
+      "view_id": "ev_calendar",
+      "entity_id": "evento",
+      "type": "calendar",
+      "calendar": {
+        "start_field": "date",
+        "end_field": null,
+        "title_field": "title"
+      }
     },
     {
       "view_id": "sender_table",
@@ -587,12 +706,34 @@
         }
       }
     },
-    {"view_id":"pivo",
-    "entity_id": "evento",
-    "type":"pivot",
-    "pivot": {
-          "value_mode": "count"
+    {
+      "view_id": "pivo",
+      "entity_id": "evento",
+      "type": "pivot",
+      "pivot": {
+        "value_mode": "count"
+      }
+    },
+    {
+      "view_id": "houkoku_cards",
+      "entity_id": "houkoku",
+      "type": "card",
+      "sort": [
+        {
+          "field": "date",
+          "dir": "DESC"
         }
-  }
+      ],
+      "card": {
+        "title_field": "title",
+        "subtitle_field": "date",
+        "media_field": "none",
+        "chips": [
+          "platform","labelA"
+        ],
+        "use_emoji": true,
+        "emoji_field": "emoji"
+      }
+    }
   ]
 }
