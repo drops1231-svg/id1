@@ -152,7 +152,7 @@
   "relations": [
     {
       "relation_id": "con_t1",
-      "label": "タグ１",
+      "label": "タグ１だよ～～",
       "type": "many_to_many",
       "left_entity": "ADB",
       "right_entity": "tags1",

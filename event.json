@@ -285,7 +285,7 @@
         }
       ]
     },
-     {
+    {
       "entity_id": "houkoku",
       "label": "実績報告",
       "source": {
@@ -474,7 +474,7 @@
   ],
   "views": [
     {
-      "view_id": "event_cards",
+      "view_id": "イベントDBカード",
       "entity_id": "evento",
       "type": "card",
       "sort": [
@@ -729,7 +729,8 @@
         "subtitle_field": "date",
         "media_field": "none",
         "chips": [
-          "platform","labelA"
+          "platform",
+          "labelA"
         ],
         "use_emoji": true,
         "emoji_field": "emoji"
