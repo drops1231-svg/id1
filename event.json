@@ -474,7 +474,7 @@
   ],
   "views": [
     {
-      "view_id": "イベントDBカード",
+      "view_id": "eve_card1",
       "entity_id": "evento",
       "type": "card",
       "sort": [
@@ -493,7 +493,9 @@
         ],
         "use_emoji": true,
         "emoji_field": "emoji"
-      }
+      },
+      "label": "イベントDBカード",
+      "folder": "イベントDB"
     },
     {
       "view_id": "event_cards2",
@@ -515,7 +517,9 @@
         ],
         "use_emoji": false,
         "emoji_field": "none"
-      }
+      },
+      "label": "イベントDBカード２",
+      "folder": "イベントDB"
     },
     {
       "view_id": "event_table",
@@ -561,7 +565,9 @@
           "tagN_list": 300,
           "minTableWidthPct": 160
         }
-      }
+      },
+      "label": "イベントDBテーブル",
+      "folder": "イベントDB"
     },
     {
       "view_id": "evento_cross",
@@ -578,7 +584,9 @@
             "snd_list"
           ]
         }
-      }
+      },
+      "label": "イベントDBクロス",
+      "folder": "イベントDB"
     },
     {
       "view_id": "ev_calendar",
@@ -588,7 +596,9 @@
         "start_field": "date",
         "end_field": null,
         "title_field": "title"
-      }
+      },
+      "label": "イベントDBカレンダー",
+      "folder": "イベントDB"
     },
     {
       "view_id": "sender_table",
@@ -615,7 +625,8 @@
           "width": 50,
           "text_chars": 240
         }
-      }
+      },
+      "label": "差出人テーブル"
     },
     {
       "view_id": "tagN_table",
@@ -651,7 +662,8 @@
           "eve-list": 220,
           "minTableWidthPct": 80
         }
-      }
+      },
+      "label": "名詞タグテーブル"
     },
     {
       "view_id": "tagN_cross",
@@ -668,7 +680,8 @@
             "none"
           ]
         }
-      }
+      },
+      "label": "名詞タグクロス"
     },
     {
       "view_id": "tags_table",
@@ -707,12 +720,14 @@
       }
     },
     {
-      "view_id": "pivo",
+      "view_id": "event_pivo",
       "entity_id": "evento",
       "type": "pivot",
       "pivot": {
         "value_mode": "count"
-      }
+      },
+      "label": "イベントDBピボット",
+      "folder": "イベントDB"
     },
     {
       "view_id": "houkoku_cards",
@@ -734,7 +749,9 @@
         ],
         "use_emoji": true,
         "emoji_field": "emoji"
-      }
+      },
+      "label": "報告DBカード",
+      "folder": "報告DB"
     }
   ]
 }

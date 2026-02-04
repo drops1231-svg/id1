@@ -49,7 +49,7 @@
       "icon": "✨️",
       "profile_json_path": "D:/原本/Aその2/てすとじょう/実データ/event.json",
       "sqlite_path_override": "D:/原本/Aその2/てすとじょう/実データ/event.db",
-      "default_view_id": "イベントDBカード"
+      "default_view_id": "eve_card1"
     }
   ]
 }
