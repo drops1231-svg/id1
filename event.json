@@ -614,10 +614,10 @@
         "logic": "AND",
         "clauses": []
       },
-      "sort": {
-        "field": "sender_name",
-        "dir": "ASC"
-      },
+      "sort": [
+        {"field": "sender_name",
+        "dir": "DESC"}
+      ],
       "display_props": {
         "preview": {
           "field": "none",
@@ -700,7 +700,7 @@
       "sort": [
         {
           "field": "name",
-          "dir": "ASC"
+          "dir": "DESC"
         }
       ],
       "display_props": {
