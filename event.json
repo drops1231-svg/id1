@@ -1,8 +1,8 @@
 {
   "profile_name": "event_v1",
   "storage": {
-    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/event.db",
-    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/event"
+    "sqlite_path": "D:/原本/Aその3/実データ/event.db",
+    "attachments_base": "D:/原本/Aその3/実データ/event"
   },
   "entities": [
     {
@@ -616,8 +616,10 @@
         "clauses": []
       },
       "sort": [
-        {"field": "sender_name",
-        "dir": "DESC"}
+        {
+          "field": "sender_name",
+          "dir": "ASC"
+        }
       ],
       "display_props": {
         "preview": {
@@ -725,7 +727,9 @@
       "entity_id": "evento",
       "type": "pivot",
       "pivot": {
-        "value_mode": "count"
+        "value_mode": "count",
+        "row_field": "date",
+        "col_field": "rank"
       },
       "label": "イベントDBピボット",
       "folder": "イベントDB"

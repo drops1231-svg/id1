@@ -1,8 +1,8 @@
 {
   "profile_name": "asset-p",
   "storage": {
-    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/asset.db",
-    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/asset"
+    "sqlite_path": "D:/原本/Aその3/実データ/asset.db",
+    "attachments_base": "D:/原本/Aその3/実データ/asset"
   },
   "entities": [
     {
@@ -45,6 +45,34 @@
           }
         },
         {
+          "field_id": "meigi",
+          "label": "名義",
+          "type": "select_multi",
+          "options_json": [
+            "姫野ドロ",
+            "氷芽野ドロ",
+            "00",
+            "000"
+          ],
+          "source": {
+            "column": "meigi"
+          }
+        },
+        {
+          "field_id": "bunrui",
+          "label": "分類",
+          "type": "select_multi",
+          "options_json": [
+            "自撮り",
+            "ボディ自撮り",
+            "ブログ記事",
+            "分類3"
+          ],
+          "source": {
+            "column": "bunrui"
+          }
+        },
+        {
           "field_id": "koukai",
           "label": "公開制限",
           "type": "select",
@@ -76,6 +104,7 @@
           "type": "select_multi",
           "options_json": [
             "採用予定",
+            "ファンキット",
             "ゲームX",
             "ドキュX"
           ],
@@ -153,6 +182,8 @@
       "columns": [
         "title",
         "sdate",
+        "bunrui",
+        "meigi",
         "koukai",
         "hanbai",
         "saiyou",
@@ -176,14 +207,17 @@
           "text_chars": 100
         },
         "column_widths": {
-          "title": 200,
+          "title": 400,
           "sdate": 200,
+          "bunrui": 200,
+          "meigi": 200,
           "koukai": 200,
           "hanbai": 200,
           "saiyou": 200,
           "touka": 200
         }
-      }
+      },
+      "label": "アセットテーブル"
     },
     {
       "view_id": "documents_cards",
@@ -228,12 +262,13 @@
         }
       ]
     },
-    {"view_id":"pivo",
-    "entity_id": "documents",
-    "type":"pivot",
-    "pivot": {
-          "value_mode": "count"
-        }
-  }
+    {
+      "view_id": "pivo",
+      "entity_id": "documents",
+      "type": "pivot",
+      "pivot": {
+        "value_mode": "count"
+      }
+    }
   ]
 }

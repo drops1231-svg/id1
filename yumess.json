@@ -1,8 +1,8 @@
 {
   "profile_name": "yumess_pr",
   "storage": {
-    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/yumess.db",
-    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/yumess"
+    "sqlite_path": "D:/原本/Aその3/実データ/yumess.db",
+    "attachments_base": "D:/原本/Aその3/実データ/yumess"
   },
   "entities": [
     {
