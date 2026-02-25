@@ -1,8 +1,8 @@
 {
   "profile_name": "none",
   "storage": {
-    "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/none.db",
-    "in_sqlite_basePath": "D:/原本/Aその2/てすとじょう/実データ"
+    "sqlite_path": "D:/原本/内部データベース/てすとじょう/実データ/none.db",
+    "in_sqlite_basePath": "D:/原本/内部データベース/てすとじょう/実データ"
   },
   "entities": [
     { "entity_id": "ADB", "label": "A", "source": { "table": "ADB" },
