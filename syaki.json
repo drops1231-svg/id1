@@ -1,8 +1,8 @@
 {
   "profile_name": "syaki_v1",
   "storage": {
-    "sqlite_path": "D:/原本/Aその3/実データ/syaki.db",
-    "in_sqlite_basePath": "D:/原本/Aその3/実データ/syaki"
+    "sqlite_path": "D:/原本/内部データベース/実データ/syaki.db",
+    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
   },
   "entities": [
     {

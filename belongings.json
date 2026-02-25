@@ -1,7 +1,8 @@
 {
   "profile_name": "belongings_v1",
   "storage": {
-    "sqlite_path": "D:/原本/Aその3/実データ/belongings.db"
+    "sqlite_path": "D:/原本/内部データベース/実データ/belongings.db",
+    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
   },
   "entities": [
     {

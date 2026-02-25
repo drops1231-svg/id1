@@ -1,8 +1,8 @@
 {
   "profile_name": "asset-p",
   "storage": {
-    "sqlite_path": "D:/原本/Aその3/実データ/asset.db",
-    "in_sqlite_basePath": "D:/原本/Aその3/実データ/asset"
+    "sqlite_path": "D:/原本/内部データベース/実データ/asset.db",
+    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
   },
   "entities": [
     {
