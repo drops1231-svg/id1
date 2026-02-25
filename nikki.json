@@ -2,7 +2,7 @@
   "profile_name": "nikki_gattai_v1",
   "storage": {
     "sqlite_path": "D:/原本/Aその3/実データ/nikki-gattai.db",
-    "attachments_base": "D:/原本/Aその3/実データ/nikki"
+    "in_sqlite_basePath": "D:/原本/Aその3/実データ/nikki"
   },
   "entities": [
     {

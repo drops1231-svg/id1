@@ -2,7 +2,7 @@
   "profile_name": "event_v1",
   "storage": {
     "sqlite_path": "D:/原本/内部データベース/実データ/event.db",
-    "attachments_base": "D:/原本/内部データベース/実データ/event"
+    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
   },
   "entities": [
     {

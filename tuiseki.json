@@ -2,7 +2,7 @@
   "profile_name": "tuiseki",
   "storage": {
     "sqlite_path": "D:/原本/Aその2/てすとじょう/実データ/tuiseki.db",
-    "attachments_base": "D:/原本/Aその2/てすとじょう/実データ/none"
+    "in_sqlite_basePath": "D:/原本/Aその2/てすとじょう/実データ/none"
   },
   "entities": [
     {

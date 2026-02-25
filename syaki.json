@@ -2,7 +2,7 @@
   "profile_name": "syaki_v1",
   "storage": {
     "sqlite_path": "D:/原本/Aその3/実データ/syaki.db",
-    "attachments_base": "D:/原本/Aその3/実データ/syaki"
+    "in_sqlite_basePath": "D:/原本/Aその3/実データ/syaki"
   },
   "entities": [
     {
