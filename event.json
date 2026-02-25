@@ -1,8 +1,8 @@
 {
   "profile_name": "event_v1",
   "storage": {
-    "sqlite_path": "D:/原本/Aその3/実データ/event.db",
-    "attachments_base": "D:/原本/Aその3/実データ/event"
+    "sqlite_path": "D:/原本/内部データベース/実データ/event.db",
+    "attachments_base": "D:/原本/内部データベース/実データ/event"
   },
   "entities": [
     {
