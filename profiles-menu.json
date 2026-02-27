@@ -6,49 +6,42 @@
       "label": "テスト",
       "icon": "🔣",
       "profile_json_path": "D:/原本/内部データベース/実データ/test.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/test.db",
       "default_view_id": "con_table"
     },
     {
       "label": "アセット",
       "icon": "📸",
       "profile_json_path": "D:/原本/内部データベース/実データ/asset.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/asset.db",
       "default_view_id": "documents_table"
     },
     {
       "label": "日記",
       "icon": "📓",
       "profile_json_path": "D:/原本/内部データベース/実データ/nikki.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/nikki-gattai.db",
       "default_view_id": "documents_table"
     },
     {
       "label": "持ち物",
       "icon": "🎒",
       "profile_json_path": "D:/原本/内部データベース/実データ/belongings.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/belongings.db",
       "default_view_id": "items_table"
     },
     {
       "label": "ゆめしょ",
       "icon": "🌙",
       "profile_json_path": "D:/原本/内部データベース/実データ/yumess.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/yumess.db",
       "default_view_id": "documents_table"
     },
     {
       "label": "かんしゃ",
       "icon": "👐",
       "profile_json_path": "D:/原本/内部データベース/実データ/syaki.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/syaki.db",
       "default_view_id": "event_table"
     },
     {
       "label": "もえ帳",
       "icon": "✨️",
       "profile_json_path": "D:/原本/内部データベース/実データ/event.json",
-      "sqlite_path_override": "D:/原本/内部データベース/実データ/event.db",
       "default_view_id": "eve_card1"
     }
   ]

@@ -244,6 +244,7 @@
       ],
       "display_props": {
         "preview": {
+          "enabled": false,
           "field": "path",
           "column_index": 1,
           "width": 150,
@@ -288,8 +289,11 @@
           "field": "name",
           "dir": "ASC"
         }
-      ]
-    },
+      ],
+      "display_props": {
+        "preview": {
+          "enabled": false}
+    }},
     {
       "view_id": "v_cross_status_owner",
       "entity_id": "ADB",

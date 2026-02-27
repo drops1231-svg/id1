@@ -349,6 +349,7 @@
       "type": "pivot",
       "pivot": {
         "value_mode": "sum",
+        "value_field": "price",
         "row_field": "category",
         "col_field": "topbunrui"
       },
