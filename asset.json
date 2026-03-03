@@ -51,8 +51,8 @@
           "options_json": [
             "姫野ドロ",
             "氷芽野ドロ",
-            "00",
-            "000"
+            "天音",
+            "ドロたち"
           ],
           "source": {
             "column": "meigi"
@@ -64,14 +64,14 @@
           "type": "select_multi",
           "options_json": [
             "自撮り",
+            "予備自撮り",
             "ボディ自撮り",
-            "ブログ記事",
-            "分類3",
             "おまけ自撮り",
-            "ショート",
+            "ブログ記事",
+            "短尺ショート",
+            "スマホ撮り動画",
             "どろたち写真おもいで",
-            "どろたち写真すっぴん眼鏡裸眼チャレンジ",
-            "予備自撮り"
+            "どろたち写真すっぴん眼鏡裸眼チャレンジ"
           ],
           "source": {
             "column": "bunrui"
@@ -108,10 +108,10 @@
           "label": "採用状況",
           "type": "select_multi",
           "options_json": [
+            "採用しない",
             "採用予定",
             "ファンキット",
-            "ゲームX",
-            "ドキュX"
+            "恋愛電信","ゲームX"
           ],
           "source": {
             "column": "saiyou"
@@ -212,14 +212,14 @@
           "text_chars": 100
         },
         "column_widths": {
-          "title": 400,
-          "sdate": 200,
-          "bunrui": 200,
-          "meigi": 200,
-          "koukai": 200,
-          "hanbai": 200,
+          "title": 500,
+          "sdate": 250,
+          "bunrui": 250,
+          "meigi": 250,
+          "koukai": 250,
+          "hanbai": 300,
           "saiyou": 200,
-          "touka": 200
+          "touka": 250,"minTableWidthPct": 120
         }
       },
       "label": "アセットテーブル"
@@ -233,7 +233,8 @@
         "subtitle_field": "sdate",
         "media_field": "path",
         "chips": [
-          "touka"
+          "bunrui",
+          "meigi"
         ]
       }
     },
