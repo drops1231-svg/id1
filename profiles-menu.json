@@ -1,7 +1,8 @@
 {
   "menu_title": "プロファイル切替",
   "auto_load_first": true,
-  "buttons": [
+  "buttons": [ 
+    
     {
       "label": "テスト",
       "icon": "🔣",

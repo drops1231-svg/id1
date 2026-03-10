@@ -223,7 +223,12 @@
           "field": "name",
           "dir": "ASC"
         }
-      ]
+      ],
+      "display_props": {
+        "preview": {
+          "enabled": false
+        }
+      }
     }
   ]
 }
