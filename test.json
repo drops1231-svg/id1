@@ -1,8 +1,9 @@
 {
   "profile_name": "ipbox",
   "storage": {
-    "sqlite_path": "D:/原本/内部データベース/実データ/test.db",
-    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
+    "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/test.db",
+    "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ",
+    "attachments_base": ""
   },
   "entities": [
     {
@@ -292,8 +293,10 @@
       ],
       "display_props": {
         "preview": {
-          "enabled": false}
-    }},
+          "enabled": false
+        }
+      }
+    },
     {
       "view_id": "v_cross_status_owner",
       "entity_id": "ADB",

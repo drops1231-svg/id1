@@ -1,48 +1,47 @@
 {
   "menu_title": "プロファイル切替",
   "auto_load_first": true,
-  "buttons": [ 
-    
+  "buttons": [
     {
       "label": "テスト",
       "icon": "🔣",
-      "profile_json_path": "D:/原本/内部データベース/実データ/test.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/test.json",
       "default_view_id": "con_table"
     },
     {
       "label": "アセット",
       "icon": "📸",
-      "profile_json_path": "D:/原本/内部データベース/実データ/asset.json",
+      "profile_json_path": "D:/原本/ディレクトリ02/実データ3/asset.json",
       "default_view_id": "documents_table"
     },
     {
       "label": "日記",
       "icon": "📓",
-      "profile_json_path": "D:/原本/内部データベース/実データ/nikki.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/nikki.json",
       "default_view_id": "documents_table"
     },
     {
       "label": "持ち物",
       "icon": "🎒",
-      "profile_json_path": "D:/原本/内部データベース/実データ/belongings.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/belongings.json",
       "default_view_id": "items_table"
     },
     {
       "label": "ゆめしょ",
       "icon": "🌙",
-      "profile_json_path": "D:/原本/内部データベース/実データ/yumess.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/yumess.json",
       "default_view_id": "documents_table"
     },
     {
       "label": "かんしゃ",
       "icon": "👐",
-      "profile_json_path": "D:/原本/内部データベース/実データ/syaki.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/syaki.json",
       "default_view_id": "event_table"
     },
     {
       "label": "もえ帳",
       "icon": "✨️",
-      "profile_json_path": "D:/原本/内部データベース/実データ/event.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/event.json",
       "default_view_id": "eve_card1"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "profile_name": "event_v1",
   "storage": {
-    "sqlite_path": "D:/原本/内部データベース/実データ/event.db",
-    "in_sqlite_basePath": "D:/原本/内部データベース/実データ"
+    "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/event.db",
+    "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ"
   },
   "entities": [
     {
@@ -76,7 +76,7 @@
         {
           "field_id": "platform",
           "label": "名義",
-          "type": "select_multi",
+          "type": "multi_select",
           "options_json": [
             "姫野ドロ",
             "現実の紀伊",
@@ -92,7 +92,7 @@
         {
           "field_id": "labelA",
           "label": "タグ",
-          "type": "select_multi",
+          "type": "multi_select",
           "options_json": [
             "なし",
             "相手が自発的に",
@@ -111,7 +111,7 @@
         {
           "field_id": "labelB",
           "label": "ネガタグ",
-          "type": "select_multi",
+          "type": "multi_select",
           "options_json": [
             "なし",
             "センシティブ",
@@ -487,7 +487,7 @@
       ],
       "card": {
         "title_field": "genbun",
-        "subtitle_field": "tagN_list",
+        "subtitle_field": "title",
         "media_field": "none",
         "chips": [
           "platform",
@@ -624,6 +624,7 @@
       ],
       "display_props": {
         "preview": {
+          "enabled": false,
           "field": "none",
           "column_index": 10,
           "width": 50,
@@ -709,6 +710,7 @@
       ],
       "display_props": {
         "preview": {
+          "enabled": false,
           "field": "none",
           "column_index": 10,
           "width": 50,
