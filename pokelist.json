@@ -1,0 +1,492 @@
+{
+  "profile_name": "pokelist",
+  "storage": {
+    "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/pokelist.db",
+    "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ"
+  },
+  
+  "entities": [
+    {
+      "entity_id": "pokelist",
+      "label": "図鑑",
+      "source": {
+        "table": "A"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": { "column": "id" }
+        },
+        {
+          "field_id": "zukan_no",
+          "label": "図鑑no.",
+          "type": "text",
+          "source": { "column": "zukan_no" }
+        },
+        {
+          "field_id": "current_nn",
+          "label": "現在のNN",
+          "type": "text",
+          "source": { "column": "current_nn" }
+        },
+        {
+          "field_id": "identifier",
+          "label": "識別名",
+          "type": "text",
+          "source": { "column": "identifier" }
+        },
+        {
+          "field_id": "box_category",
+          "label": "帰属ボックス分類",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "box_category" }
+        },
+        {
+          "field_id": "box",
+          "label": "帰属ボックス",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "box" }
+        },
+        {
+          "field_id": "box_order",
+          "label": "ボックス内並び順",
+          "type": "text",
+          "source": { "column": "box_order" }
+        },
+        {
+          "field_id": "species",
+          "label": "種族名",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "species" }
+        },
+        {
+          "field_id": "color",
+          "label": "体色",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "color" }
+        },
+        {
+          "field_id": "gender",
+          "label": "性別",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "gender" }
+        },
+        {
+          "field_id": "personality",
+          "label": "性格",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "personality" }
+        },
+        {
+          "field_id": "language",
+          "label": "言語",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "language" }
+        },
+        {
+          "field_id": "distribution_flag",
+          "label": "配布フラグ",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "distribution_flag" }
+        },
+        {
+          "field_id": "special_flag",
+          "label": "特別個体フラグ",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "special_flag" }
+        },
+        {
+          "field_id": "form",
+          "label": "すがた",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "form" }
+        },
+        {
+          "field_id": "mark",
+          "label": "あかし",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "mark" }
+        },
+        {
+          "field_id": "moves",
+          "label": "わざ",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "moves" }
+        },
+        {
+          "field_id": "ability",
+          "label": "特性",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "ability" }
+        },
+        {
+          "field_id": "hidden_ability",
+          "label": "夢特性？",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "hidden_ability" }
+        },
+        {
+          "field_id": "ball",
+          "label": "ボール",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "ball" }
+        },
+        {
+          "field_id": "parent_name",
+          "label": "親",
+          "type": "text",
+          "source": { "column": "parent_name" }
+        },
+        {
+          "field_id": "parent_id",
+          "label": "親ID",
+          "type": "text",
+          "source": { "column": "parent_id" }
+        },
+        {
+          "field_id": "met_date",
+          "label": "出会った日",
+          "type": "text",
+          "source": { "column": "met_date" }
+        },
+        {
+          "field_id": "met_place",
+          "label": "出会った場所",
+          "type": "text",
+          "source": { "column": "met_place" }
+        },
+        {
+          "field_id": "origin_trainer",
+          "label": "だれ産",
+          "type": "text",
+          "source": { "column": "origin_trainer" }
+        },
+        {
+          "field_id": "first_confirmed_date",
+          "label": "所持が確認できている最初の日付",
+          "type": "text",
+          "source": { "column": "first_confirmed_date" }
+        },
+        {
+          "field_id": "origin_software",
+          "label": "出身ソフト",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "origin_software" }
+        },
+        {
+          "field_id": "current_software",
+          "label": "現在の所在ソフト",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "current_software" }
+        },
+        {
+          "field_id": "memo",
+          "label": "メモ",
+          "type": "text_long",
+          "source": { "column": "memo" }
+        }
+      ]
+    },
+  
+
+    {
+      "entity_id": "iroti",
+      "label": "色違い追加情報",
+      "source": {
+        "table": "B"
+      },
+      "fields": [
+        {
+          "field_id": "id",
+          "label": "ID",
+          "type": "pk",
+          "source": { "column": "id" }
+        },
+        {
+          "field_id": "order_no",
+          "label": "じゅんばん",
+          "type": "multi_select",
+          "options_json": [],
+          "source": { "column": "order_no" }
+        },
+        {
+          "field_id": "date",
+          "label": "日付",
+          "type": "date",
+          "source": { "column": "date" }
+        },
+        {
+          "field_id": "name",
+          "label": "名前",
+          "type": "text",
+          "options_json": [],
+          "source": { "column": "name" }
+        },
+        {
+          "field_id": "software",
+          "label": "ソフト",
+          "type": "select",
+          "options_json": ["Y","M","盾","LA","V","GO","ZA"],
+          "source": { "column": "software" }
+        },
+        {
+          "field_id": "shiny_boost",
+          "label": "色違い確率アップ要素",
+          "type": "multi_select",
+          "options_json": ["自然遭遇","国際孵化","大量発生","大大大発生","コミュニティデイ","ポケポータルイベント","フレンドサファリ"],
+          "source": { "column": "shiny_boost" }
+        },
+        {
+          "field_id": "bonus",
+          "label": "ひかおま、かがやきパワー",
+          "type": "multi_select",
+          "options_json": ["ひかおま","かがやきパワーlv3"],
+          "source": { "column": "bonus" }
+        },
+        {
+          "field_id": "after_action",
+          "label": "その後どうしたか",
+          "type": "text",
+          "options_json": [],
+          "source": { "column": "after_action" }
+        },
+        {
+          "field_id": "detail",
+          "label": "入手詳細",
+          "type": "text",
+          "options_json": [],
+          "source": { "column": "detail" }
+        },
+        {
+          "field_id": "feeling",
+          "label": "喜び",
+          "type": "select",
+          "options_json": ["大喜び","かなり嬉しい","平常心","安堵","喜びは薄い","いらん"],
+          "source": { "column": "feeling" }
+        },
+        {
+          "field_id": "diary",
+          "label": "当時の日記",
+          "type": "text_long",
+          "options_json": [],
+          "source": { "column": "diary" }
+        }
+      
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "irotituika",
+      "label": "いろち追加",
+      "type": "many_to_many",
+      "left_entity": "pokelist",
+      "right_entity": "iroti",
+      "through": {
+        "table": "pokelist_iroti",
+        "left_key": "pokelist_id",
+        "right_key": "iroti_id"
+      },
+      "lookups": [
+        {
+          "into_field_id": "iroti_list",
+          "from": "iroti.name",
+          "display": "comma_join"
+        },
+        {
+          "into_field_id": "pokelist_list",
+          "from": "pokelist.identifier",
+          "display": "comma_join"
+        }
+      ]}],
+  "views": [
+    {
+      "view_id": "pokelist_table",
+      "entity_id": "pokelist",
+      "type": "table",
+      "columns": [
+        "zukan_no",
+        "current_nn",
+        "identifier",
+        "box_category",
+        "box",
+        "box_order",
+        "species",
+        "color",
+        "gender",
+        "personality",
+        "language",
+        "distribution_flag",
+        "special_flag",
+        "form",
+        "mark",
+        "moves",
+        "ability",
+        "hidden_ability",
+        "ball",
+        "parent_name",
+        "parent_id",
+        "met_date",
+        "met_place",
+        "origin_trainer",
+        "first_confirmed_date",
+        "origin_software",
+        "current_software",
+        "memo"
+      ],
+      "display_props": {
+        "preview": {
+          "enabled": false,
+          "field": "species",
+          "column_index": 0,
+          "width": 100,
+          "text_chars": 120
+        },
+        "column_widths": {
+          "zukan_no": 120,
+          "current_nn": 160,
+          "identifier": 200,
+          "box_category": 160,
+          "box": 160,
+          "box_order": 120,
+          "species": 200,
+          "color": 140,
+          "gender": 120,
+          "personality": 160,
+          "language": 140,
+          "distribution_flag": 160,
+          "special_flag": 160,
+          "form": 160,
+          "mark": 160,
+          "moves": 220,
+          "ability": 180,
+          "hidden_ability": 160,
+          "ball": 140,
+          "parent_name": 160,
+          "parent_id": 140,
+          "met_date": 160,
+          "met_place": 200,
+          "origin_trainer": 160,
+          "first_confirmed_date": 180,
+          "origin_software": 180,
+          "current_software": 180,
+          "memo": 300,
+          "minTableWidthPct": 360
+        }
+      },
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }
+      ]
+    },
+    {
+      "view_id": "pokelist_card",
+      "entity_id": "pokelist"
+      ,
+      "type": "card",
+      "card": {
+        "title_field": "species",
+        "subtitle_field": "current_nn",
+        "media_field": "memo",
+        "chips": [
+          "color",
+          "gender",
+          "ball",
+          "origin_software"
+        ]
+      },
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }
+      ]
+    },
+    {
+      "view_id": "records_table",
+      "entity_id": "iroti",
+      "type": "table",
+      "columns": [
+        "order_no",
+        "date",
+        "name",
+        "software",
+        "shiny_boost",
+        "bonus",
+        "after_action",
+        "detail",
+        "feeling",
+        "diary"
+      ],
+      "display_props": {
+        "preview": {
+          "enabled": false,
+          "field": "none",
+          "column_index": 0,
+          "width": 100,
+          "text_chars": 240
+        },
+        "column_widths": {
+          "order_no": 120,
+          "date": 160,
+          "name": 200,
+          "software": 200,
+          "shiny_boost": 200,
+          "bonus": 200,
+          "after_action": 240,
+          "detail": 300,
+          "feeling": 160,
+          "diary": 600,
+          "minTableWidthPct": 180
+        }
+      },
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }
+      ]
+    },
+    {
+      "view_id": "records_cards",
+      "entity_id": "iroti",
+      "type": "card",
+      "card": {
+        "title_field": "name",
+        "subtitle_field": "date",
+        "media_field": "detail",
+        "chips": [
+          "software",
+          "shiny_boost",
+          "bonus"
+        ]
+      },
+      "sort": [
+        {
+          "field": "id",
+          "dir": "DESC"
+        }]
+    }
+  ]
+}

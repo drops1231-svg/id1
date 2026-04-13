@@ -26,6 +26,12 @@
       "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/belongings.json",
       "default_view_id": "items_table"
     },
+        {
+      "label": "ポケリスト",
+      "icon": "👾",
+      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/pokelist.json",
+      "default_view_id": "pokelist_table"
+    },
     {
       "label": "ゆめしょ",
       "icon": "🌙",
