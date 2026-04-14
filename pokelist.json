@@ -4,7 +4,6 @@
     "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/pokelist.db",
     "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ"
   },
-  
   "entities": [
     {
       "entity_id": "pokelist",
@@ -17,197 +16,253 @@
           "field_id": "id",
           "label": "ID",
           "type": "pk",
-          "source": { "column": "id" }
+          "source": {
+            "column": "id"
+          }
         },
         {
           "field_id": "zukan_no",
           "label": "図鑑no.",
           "type": "text",
-          "source": { "column": "zukan_no" }
+          "source": {
+            "column": "zukan_no"
+          }
         },
         {
           "field_id": "current_nn",
           "label": "現在のNN",
           "type": "text",
-          "source": { "column": "current_nn" }
+          "source": {
+            "column": "current_nn"
+          }
         },
         {
           "field_id": "identifier",
           "label": "識別名",
           "type": "text",
-          "source": { "column": "identifier" }
+          "source": {
+            "column": "identifier"
+          }
         },
         {
           "field_id": "box_category",
           "label": "帰属ボックス分類",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "box_category" }
+          "source": {
+            "column": "box_category"
+          }
         },
         {
           "field_id": "box",
           "label": "帰属ボックス",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "box" }
+          "source": {
+            "column": "box"
+          }
         },
         {
           "field_id": "box_order",
           "label": "ボックス内並び順",
           "type": "text",
-          "source": { "column": "box_order" }
+          "source": {
+            "column": "box_order"
+          }
         },
         {
           "field_id": "species",
           "label": "種族名",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "species" }
+          "source": {
+            "column": "species"
+          }
         },
         {
           "field_id": "color",
           "label": "体色",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "color" }
+          "source": {
+            "column": "color"
+          }
         },
         {
           "field_id": "gender",
           "label": "性別",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "gender" }
+          "source": {
+            "column": "gender"
+          }
         },
         {
           "field_id": "personality",
           "label": "性格",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "personality" }
+          "source": {
+            "column": "personality"
+          }
         },
         {
           "field_id": "language",
           "label": "言語",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "language" }
+          "source": {
+            "column": "language"
+          }
         },
         {
           "field_id": "distribution_flag",
           "label": "配布フラグ",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "distribution_flag" }
+          "source": {
+            "column": "distribution_flag"
+          }
         },
         {
           "field_id": "special_flag",
           "label": "特別個体フラグ",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "special_flag" }
+          "source": {
+            "column": "special_flag"
+          }
         },
         {
           "field_id": "form",
           "label": "すがた",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "form" }
+          "source": {
+            "column": "form"
+          }
         },
         {
           "field_id": "mark",
           "label": "あかし",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "mark" }
+          "source": {
+            "column": "mark"
+          }
         },
         {
           "field_id": "moves",
           "label": "わざ",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "moves" }
+          "source": {
+            "column": "moves"
+          }
         },
         {
           "field_id": "ability",
           "label": "特性",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "ability" }
+          "source": {
+            "column": "ability"
+          }
         },
         {
           "field_id": "hidden_ability",
           "label": "夢特性？",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "hidden_ability" }
+          "source": {
+            "column": "hidden_ability"
+          }
         },
         {
           "field_id": "ball",
           "label": "ボール",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "ball" }
+          "source": {
+            "column": "ball"
+          }
         },
         {
           "field_id": "parent_name",
           "label": "親",
           "type": "text",
-          "source": { "column": "parent_name" }
+          "source": {
+            "column": "parent_name"
+          }
         },
         {
           "field_id": "parent_id",
           "label": "親ID",
           "type": "text",
-          "source": { "column": "parent_id" }
+          "source": {
+            "column": "parent_id"
+          }
         },
         {
           "field_id": "met_date",
           "label": "出会った日",
           "type": "text",
-          "source": { "column": "met_date" }
+          "source": {
+            "column": "met_date"
+          }
         },
         {
           "field_id": "met_place",
           "label": "出会った場所",
           "type": "text",
-          "source": { "column": "met_place" }
+          "source": {
+            "column": "met_place"
+          }
         },
         {
           "field_id": "origin_trainer",
           "label": "だれ産",
           "type": "text",
-          "source": { "column": "origin_trainer" }
+          "source": {
+            "column": "origin_trainer"
+          }
         },
         {
           "field_id": "first_confirmed_date",
           "label": "所持が確認できている最初の日付",
           "type": "text",
-          "source": { "column": "first_confirmed_date" }
+          "source": {
+            "column": "first_confirmed_date"
+          }
         },
         {
           "field_id": "origin_software",
           "label": "出身ソフト",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "origin_software" }
+          "source": {
+            "column": "origin_software"
+          }
         },
         {
           "field_id": "current_software",
           "label": "現在の所在ソフト",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "current_software" }
+          "source": {
+            "column": "current_software"
+          }
         },
         {
           "field_id": "memo",
           "label": "メモ",
           "type": "text_long",
-          "source": { "column": "memo" }
+          "source": {
+            "column": "memo"
+          }
         }
       ]
     },
-  
-
     {
       "entity_id": "iroti",
       "label": "色違い追加情報",
@@ -219,78 +274,124 @@
           "field_id": "id",
           "label": "ID",
           "type": "pk",
-          "source": { "column": "id" }
+          "source": {
+            "column": "id"
+          }
         },
         {
           "field_id": "order_no",
           "label": "じゅんばん",
           "type": "multi_select",
           "options_json": [],
-          "source": { "column": "order_no" }
+          "source": {
+            "column": "order_no"
+          }
         },
         {
           "field_id": "date",
           "label": "日付",
           "type": "date",
-          "source": { "column": "date" }
+          "source": {
+            "column": "date"
+          }
         },
         {
           "field_id": "name",
           "label": "名前",
           "type": "text",
           "options_json": [],
-          "source": { "column": "name" }
+          "source": {
+            "column": "name"
+          }
         },
         {
           "field_id": "software",
           "label": "ソフト",
           "type": "select",
-          "options_json": ["Y","M","盾","LA","V","GO","ZA"],
-          "source": { "column": "software" }
+          "options_json": [
+            "Y",
+            "M",
+            "盾",
+            "LA",
+            "V",
+            "GO",
+            "ZA"
+          ],
+          "source": {
+            "column": "software"
+          }
         },
         {
           "field_id": "shiny_boost",
           "label": "色違い確率アップ要素",
           "type": "multi_select",
-          "options_json": ["自然遭遇","国際孵化","大量発生","大大大発生","コミュニティデイ","ポケポータルイベント","フレンドサファリ"],
-          "source": { "column": "shiny_boost" }
+          "options_json": [
+            "自然遭遇",
+            "国際孵化",
+            "大量発生",
+            "大大大発生",
+            "コミュニティデイ",
+            "ポケポータルイベント",
+            "フレンドサファリ"
+          ],
+          "source": {
+            "column": "shiny_boost"
+          }
         },
         {
           "field_id": "bonus",
           "label": "ひかおま、かがやきパワー",
           "type": "multi_select",
-          "options_json": ["ひかおま","かがやきパワーlv3"],
-          "source": { "column": "bonus" }
+          "options_json": [
+            "ひかおま",
+            "かがやきパワーlv3"
+          ],
+          "source": {
+            "column": "bonus"
+          }
         },
         {
           "field_id": "after_action",
           "label": "その後どうしたか",
           "type": "text",
           "options_json": [],
-          "source": { "column": "after_action" }
+          "source": {
+            "column": "after_action"
+          }
         },
         {
           "field_id": "detail",
           "label": "入手詳細",
           "type": "text",
           "options_json": [],
-          "source": { "column": "detail" }
+          "source": {
+            "column": "detail"
+          }
         },
         {
           "field_id": "feeling",
           "label": "喜び",
           "type": "select",
-          "options_json": ["大喜び","かなり嬉しい","平常心","安堵","喜びは薄い","いらん"],
-          "source": { "column": "feeling" }
+          "options_json": [
+            "大喜び",
+            "かなり嬉しい",
+            "平常心",
+            "安堵",
+            "喜びは薄い",
+            "いらん"
+          ],
+          "source": {
+            "column": "feeling"
+          }
         },
         {
           "field_id": "diary",
           "label": "当時の日記",
           "type": "text_long",
-          "options_json": [],
-          "source": { "column": "diary" }
+          "source": {
+            "column": "diary"
+          }
         }
-      
       ]
     }
   ],
@@ -317,7 +418,9 @@
           "from": "pokelist.identifier",
           "display": "comma_join"
         }
-      ]}],
+      ]
+    }
+  ],
   "views": [
     {
       "view_id": "pokelist_table",
@@ -402,8 +505,7 @@
     },
     {
       "view_id": "pokelist_card",
-      "entity_id": "pokelist"
-      ,
+      "entity_id": "pokelist",
       "type": "card",
       "card": {
         "title_field": "species",
@@ -486,7 +588,8 @@
         {
           "field": "id",
           "dir": "DESC"
-        }]
+        }
+      ]
     }
   ]
 }
