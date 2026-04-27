@@ -1,8 +1,8 @@
 {
   "profile_name": "event_v1",
   "storage": {
-    "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/event.db",
-    "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ"
+    "sqlite_path": "D:/原本/ディレクトリ01/doro-iroiro-db/event.db",
+    "in_sqlite_basePath": "D:/原本/ディレクトリ01/doro-iroiro-db"
   },
   "entities": [
     {
@@ -67,7 +67,7 @@
           "options_json": [
             "ルーキー",
             "ブロンズ",
-            "失格"
+            "ランク外"
           ],
           "source": {
             "column": "rank"

@@ -1,8 +1,8 @@
 {
   "profile_name": "ipbox",
   "storage": {
-    "sqlite_path": "D:/原本/ディレクトリ01/内部データベース/実データ/test.db",
-    "in_sqlite_basePath": "D:/原本/ディレクトリ01/内部データベース/実データ",
+    "sqlite_path": "D:/原本/ディレクトリ01/doro-iroiro-db/test.db",
+    "in_sqlite_basePath": "D:/原本/ディレクトリ01/doro-iroiro-db",
     "attachments_base": ""
   },
   "entities": [

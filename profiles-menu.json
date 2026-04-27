@@ -5,7 +5,7 @@
     {
       "label": "テスト",
       "icon": "🔣",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/test.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/test.json",
       "default_view_id": "con_table"
     },
     {
@@ -17,37 +17,37 @@
     {
       "label": "日記",
       "icon": "📓",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/nikki.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/nikki.json",
       "default_view_id": "documents_table"
     },
     {
       "label": "持ち物",
       "icon": "🎒",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/belongings.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/belongings.json",
       "default_view_id": "items_table"
     },
         {
       "label": "ポケリスト",
       "icon": "👾",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/pokelist.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/pokelist.json",
       "default_view_id": "pokelist_table"
     },
     {
       "label": "ゆめしょ",
       "icon": "🌙",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/yumess.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/yumess.json",
       "default_view_id": "documents_table"
     },
     {
       "label": "かんしゃ",
       "icon": "👐",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/syaki.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/syaki.json",
       "default_view_id": "event_table"
     },
     {
       "label": "もえ帳",
       "icon": "✨️",
-      "profile_json_path": "D:/原本/ディレクトリ01/内部データベース/実データ/event.json",
+      "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/event.json",
       "default_view_id": "eve_card1"
     }
   ]
