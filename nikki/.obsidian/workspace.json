@@ -1,59 +1,24 @@
 {
   "main": {
-    "id": "16f71e1f3f7255ee",
+    "id": "3e1cdcea993435fc",
     "type": "split",
     "children": [
       {
-        "id": "6440cbf8cfce8036",
+        "id": "8dcc1ef50f0a46cd",
         "type": "tabs",
         "children": [
           {
-            "id": "814ae53127f486e4",
+            "id": "d9bbaf06e8f04118",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "020-ap.md",
+                "file": "2026-04/2026-04-23-N09-burogu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "020-ap"
-            }
-          },
-          {
-            "id": "73a4304c149f0649",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "021-ap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "021-ap"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "66d45f65656912cb",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "abe64c44086be9a9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "エペ夢下書き３（個人主義のapex）.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "エペ夢下書き３（個人主義のapex）"
+              "title": "2026-04-23-N09-burogu"
             }
           }
         ]
@@ -62,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "6e298dcdee953ccc",
+    "id": "096ae35450f61098",
     "type": "split",
     "children": [
       {
-        "id": "46ec3227122d4512",
+        "id": "b76c972195191ce9",
         "type": "tabs",
         "children": [
           {
-            "id": "fcbcefd6519c55e3",
+            "id": "4eeb9b6fcb48f4de",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -83,12 +48,12 @@
             }
           },
           {
-            "id": "71a54d83eb8ad1b0",
+            "id": "55f51d90e67afe6f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "断片",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +65,7 @@
             }
           },
           {
-            "id": "b60b93ddcb978337",
+            "id": "b08d1f199ff093cc",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -116,20 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "1d79c647b12534eb",
+    "id": "f030c78fcab6fa49",
     "type": "split",
     "children": [
       {
-        "id": "ebcc56d15bb414a1",
+        "id": "6488a763ec4b7694",
         "type": "tabs",
         "children": [
           {
-            "id": "abd589413b0d9640",
+            "id": "ce78cc49f912e913",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "エロメイン/もぶ0131（コピー）.md",
+                "file": "2026-04/2026-04-23-N09-burogu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "もぶ0131（コピー）へのバックリンク"
+              "title": "2026-04-23-N09-buroguへのバックリンク"
             }
           },
           {
-            "id": "ab5c017aeb8df0ba",
+            "id": "9ad63b00f813187b",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "エロメイン/もぶ0131（コピー）.md",
+                "file": "2026-04/2026-04-23-N09-burogu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "もぶ0131（コピー）からのアウトゴーイングリンク"
+              "title": "2026-04-23-N09-buroguからのアウトゴーイングリンク"
             }
           },
           {
-            "id": "4b5d0cff45c2b299",
+            "id": "f552a9f7fb512f1e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -172,7 +137,7 @@
             }
           },
           {
-            "id": "43bd00e47adc2331",
+            "id": "dcc5671ae95edef9",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -186,22 +151,21 @@
             }
           },
           {
-            "id": "6c0be48db5e1898c",
+            "id": "38288c0bc113df71",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "021-ap.md",
+                "file": "2026-04/2026-04-23-N09-burogu.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "021-apのアウトライン"
+              "title": "2026-04-23-N09-buroguのアウトライン"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -210,51 +174,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:新規ベースを作成": false,
       "switcher:クイックスイッチャーを開く": false,
       "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
       "daily-notes:今日のデイリーノートを開く": false,
       "templates:テンプレートを挿入": false,
-      "command-palette:コマンドパレットを開く": false
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
     }
   },
-  "active": "73a4304c149f0649",
+  "active": "d9bbaf06e8f04118",
   "lastOpenFiles": [
-    "020-ap.md",
-    "021-ap.md",
-    "014-ap.md",
-    "0102-全年齢-途中/032.md",
-    "0202-エロ-途中/20250324おく.md",
-    "エペ夢下書き３（個人主義のapex）.md",
-    "019-ap.md",
-    "018-ap.md",
-    "0202-エロ-途中/009-ap.md",
-    "文脈のない断片-ap.md",
-    "エペ夢下書き２.md",
-    "017-ap.md",
-    "016-ap.md",
-    "015-ap.md",
-    "エペ夢下書き１.md",
-    "0102-全年齢-途中/013-ap.md",
-    "0102-全年齢-途中/012-ap.md",
-    "0102-全年齢-途中/008-ap.md",
-    "0102-全年齢-途中/007-ap.md",
-    "0202-エロ-途中/006-ap.md",
-    "0103-全年齢-黒歴史/011-ap.md",
-    "0103-全年齢-黒歴史",
-    "0102-全年齢-途中/001-ap.md",
-    "0202-エロ-途中/010-ap.md",
-    "0102-全年齢-途中/004-ap.md",
-    "0202-エロ-途中/003-pk.md",
-    "0202-エロ-途中/005-ap.md",
-    "001-作成用",
-    "~$りすとモブまとめ.docx",
-    "新規 テキスト ドキュメント.txt",
-    "20240706オルター.tmd",
-    "999-今は読みたくない",
-    "生活系夢小説",
-    "エロメイン",
-    "000-AIなげ用"
+    "2026-04/2026-04-24-ここまでトモコレブログ完了.md",
+    "2026-04/2026-04-02-N01-pokoa.md"
   ]
 }
