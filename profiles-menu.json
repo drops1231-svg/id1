@@ -11,7 +11,7 @@
     {
       "label": "アセット",
       "icon": "📸",
-      "profile_json_path": "D:/原本/ディレクトリ02/実データ3/asset.json",
+      "profile_json_path": "D:/原本/ディレクトリ02/asset.json",
       "default_view_id": "documents_table"
     },
     {
@@ -26,7 +26,7 @@
       "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/belongings.json",
       "default_view_id": "items_table"
     },
-        {
+    {
       "label": "ポケリスト",
       "icon": "👾",
       "profile_json_path": "D:/原本/ディレクトリ01/doro-iroiro-db/pokelist.json",

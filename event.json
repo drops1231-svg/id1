@@ -655,6 +655,7 @@
       ],
       "display_props": {
         "preview": {
+          "enabled": false,
           "field": "path",
           "column_index": 10,
           "width": 50,
